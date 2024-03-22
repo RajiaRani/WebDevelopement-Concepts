@@ -1,0 +1,68 @@
+ #login
+{
+    background-color:white;
+    
+}
+#signup{
+    background-color:red;
+    color:white;
+}
+.cls{
+    color:blanchedalmond;
+    background-color:black;
+}
+/* decandant selector */
+/* ek method to ye hai ki hum sabhi achor tag ko paragraph se or else kisi aur file se lekar ek sath collect kar li */
+/* p a{
+    color:purple;
+} */
+.post a{
+    color:blueviolet;
+    background-color:coral;
+}
+nav ul li  {
+    color:darkred;
+}
+/*adjacent sibling combinator */
+.cls+button{
+    background-color:cornflowerblue;
+    color:darkblue;
+}
+p+h3{
+    text-decoration:underline;
+}
+/* child combinator */
+div > input{
+    color:darkslategray;
+    background-color:blanchedalmond;
+
+}
+/* attribute selector */
+input[type="text"]
+{
+    color:brown;
+}
+input[type="password"]
+{
+    color:darkblue;
+}
+button:hover 
+{
+  background-color:black;
+  color:white;
+
+}
+button:active{
+    background-color:hotpink;
+}
+p:active{
+    font-weight:bold;
+    color:darkblue;
+}
+input[type="radio"]:checked+label{
+    color:red;
+    font-weight:bold;
+}
+h1::first-letter{
+    color:red;
+}

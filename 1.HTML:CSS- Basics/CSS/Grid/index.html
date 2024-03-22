@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="heading1">Grid :</h1> <br>
+    <div class="container">
+        <div class="div1">
+            <p>Grid :</p>
+            <ul>
+            <li>Setting a container's display to Grid will make all children grid items.</li>
+            <li>Grid is apply on the direct child of the div. </li>
+            <li>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to
+                design web pages without having to use floats and positioning.</li>
+            </ul>
+        </div>
+
+        <div class="div2">
+            <p>Display Property :</p>
+            <p> An HTML element becomes a grid container when its display property is set to <b>grid </b>or
+                <b>inline-grid</b>.
+            </p>
+            <ul>
+                <li>display : grid</li>
+                <li>display : inline-grid</li>
+                <li>All direct children of the grid container automatically become grid items.</li>
+            </ul>
+        </div>
+
+        <div class="div3">
+            <p>Grid Columns </p>
+            <ul>
+                <li>The vertical lines of grid items are called columns.</li>
+                <p>Their are serval ways to write columns:</p>
+                <ol>
+                    <li>grid-template-columns : auto</li>
+                    <li>grid-template-columns : repeat(count, 1fr)</li>
+                    <li>grid-template-columns : 1fr 1fr 1fr</li>
+                </ol>
+                <p>You can adjust the gap size by using : <b>colmun-gap</b></p>
+            </ul>
+        </div>
+
+
+        <div class="div4">
+            <p>Grid Rows</p>
+            <ul>
+                <li> The horizontal lines of grid items are called rows.</li>
+                <li>You can adjust the gap size by using : <b>row-gap</b></li>
+            </ul>
+            <p>Grid Gaps</p>
+            <ul>
+                <li>The spaces between each column/row are called gaps.</li>
+                <p>You can adjust the gap size by using : <b>gap</b></p>
+            </ul>
+        </div>
+
+
+        <div class="div5">
+            <p>Grid Lines</p>
+            <ul>
+                <li>
+                    The lines between columns are called <b>Column lines</b>.
+                    The lines between rows are called <b>Row lines</b>.</li>
+                <p>Grid Cell :</p>
+                <li> The intersection of a grid row and a grid column.</li>
+                <p>Grid Track :</p>
+                <li>A grid track is the space between <span>two adjacent grid lines</span> .
+                    <ul>
+                        <li>A <b>Column track </b>is the space between <span>two vertical grid lines</span>, creating a
+                            column.</li>
+                            <br>
+                        <li>A <b>Row trac</b>k is the space between <span>two horizontal grid lines</span>, creating a
+                            row.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+            <div class="div6">
+               <ul>
+                <li>CSS for this page is : </li>
+                <ol>
+                    <li>display: grid;</li>
+                    <li>grid-template-columns: repeat(3,1fr);</li>
+                    <li>grid-template-rows: repeat(2,1fr);</li>
+                    <li>grid-gap: 10px;</li>
+                </ol>
+               </ul>
+            </div>
+
+    </div>
+</body>
+
+</html>

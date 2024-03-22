@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class Properties</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Active Property :</h1>
+    <ul>
+        <li> When using a mouse,"activation" typically starts when the user presses down the primary mouse button.</li>
+        <li>Targets an element that is being activated by the user, typically through clicking or tapping.</li>
+    </ul>
+    <button class="active">Active</button>
+    <hr>
+    <h1>Hover Property</h1>
+    <p>Applies when a user points/floats over an element with the cursor.
+        Commonly used to change the appearance of links or buttons when moused over.</p>
+    <ul>
+        <li>The :hover property, when the user interacts with an element with a pointing device, but does not
+            necessarily activate it. </li>
+        <li>It is generally triggered when the user hovers over an element with the cursor (mouse pointer).</li>
+    </ul>
+    <button class="hover">Hover</button>
+    <br>
+    <br>
+    <a href="#">Try hovering over this link.</a>
+    <br>
+    <br>
+    <div class="divHover">Hello, I am a div. Try hovering on me!!</div>
+    <hr>
+    <h1>Focus Property :</h1>
+    <p>It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's Tab key.
+    </p>
+    <h2>Example 1:</h2>
+    <form>
+        <p>Which flavor would you like to order?</p>
+        <label>Full Name: <input name="firstName" type="text" /></label>
+        <label>Flavor:
+            <select name="flavor">
+                <option>Cherry</option>
+                <option>Green Tea</option>
+                <option>Moose Tracks</option>
+                <option>Mint Chip</option>
+            </select>
+        </label>
+    </form>
+    <h2>Example 2:</h2>
+    <div><input class="red-input" value="I'll be red when focused." /></div> <br>
+    <div><input class="blue-input" value="I'll be blue when focused." /></div>
+    <hr>
+    <h1>Focus Visisble :</h1>
+    <ul>
+        <li>The :focus-visible pseudo-class applies while an element matches the :focus pseudo-class and the UA (User
+            Agent) determines via heuristics that the focus should be made evident on the element. (Many browsers show a
+            "focus ring" by default in this case.)</li>
+    </ul>
+    <form>
+        <p>Which flavor would you like to order?</p>
+        <label>Full Name: <input name="firstName" type="text" /></label>
+        <label>Flavor:
+            <select name="dish">
+                <option>Butter Chicken</option>
+                <option>Palak Paneer</option>
+                <option>Dosa</option>
+                <option>Idli</option>
+                <option>Chole Batture</option>
+                <option>Rajma Chawal</option>
+                <option>Curd Rice</option>
+            </select>
+        </label>
+    </form>
+    <h2>Example 2:</h2>
+    <input type="text" value="Default styles" /> &nbsp;
+    <button>Default styles</button><br> <br>
+
+    <input class="focus-only" type="text" value=":focus" /> &nbsp;
+    <button class="focus-only">:focus</button><br> <br>
+
+    <input class="focus-visible-only" type="text" value=":focus-visible" /> &nbsp;
+    <button class="focus-visible-only">:focus-visible</button> <br> <br>
+    <hr>
+    <h1>Any-Link Property :</h1>
+    <ul>
+        <li>
+            The :any-link CSS pseudo-class selector represents an element that acts as the source anchor of a hyperlink,
+            independent of whether it has been visited. In other words, it matches every <a> or <area> element that has
+                an href attribute. Thus, it matches all elements that match :link or :visited.</li>
+    </ul>
+    <p>Pages that you might have visited:</p>
+    <ul>
+        <li>
+            <a href="https://developer.mozilla.org">MDN Web Docs</a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/YouTube">Google</a>
+        </li>
+    </ul>
+    <p>Pages unlikely to be in your history:</p>
+    <ul>
+        <li>
+            <a href="https://developer.mozilla.org/missing-3">Random MDN page</a>
+        </li>
+        <li>
+            <a href="https://example.com/missing-3">Random Example page</a>
+        </li>
+    </ul>
+   <hr>
+</body>
+
+</html>

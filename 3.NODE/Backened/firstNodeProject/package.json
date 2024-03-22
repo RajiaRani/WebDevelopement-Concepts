@@ -1,0 +1,14 @@
+{
+  "name": "clear",
+  "version": "1.0.0",
+  "description": "This is my first project using npm.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rajia Rani",
+  "license": "ISC",
+  "dependencies": {
+    "figlet": "^1.7.0"
+  }
+}

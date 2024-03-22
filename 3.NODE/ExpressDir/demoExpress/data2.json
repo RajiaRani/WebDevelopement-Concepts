@@ -1,0 +1,63 @@
+{
+    "insta": [
+      {
+        "username": "RajiaRani01",
+        "data": {
+          "likes": 120,
+          "comments": 45,
+          "activity": [
+            {"type": "post", "date": "2024-03-20", "content": "Exploring the city!"},
+            {"type": "like", "date": "2024-03-19", "content": "Liked a travel vlog"}
+          ]
+        },
+        "followers": 800,
+        "following": 150,
+        "personalInfo": {
+          "img" : " https://plus.unsplash.com/premium_photo-1709143099151-e36d78c582ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4MHx8fGVufDB8fHx8fA%3D%3D",
+          "age": 24,
+          "gender": "Male",
+          "education": {"highestLevel": "Bachelor's", "fieldOfStudy": "Biology", "university": "State University"}
+        }
+      },
+      {
+        "username": "ChenchuReddy02",
+        "data": {
+          "likes": 305,
+          "comments": 89,
+          "activity": [
+            {"type": "post", "date": "2024-03-18", "content": "Homemade pizza recipe!"},
+            {"type": "comment", "date": "2024-03-17", "content": "Thanks for the support!"}
+          ]
+        },
+        "followers": 1200,
+        "following": 300,
+        "personalInfo": {
+          "img" : " https://images.unsplash.com/photo-1710768939548-0b3bd361a2d9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "age": 29,
+          "gender": "Female",
+          "education": {"highestLevel": "Master's", "fieldOfStudy": "Culinary Arts", "university": "Culinary Institute"}
+        }
+      },
+     
+      {
+        "username": "ShivaReddy20",
+        "data": {
+          "likes": 210,
+          "comments": 58,
+          "activity": [
+            {"type": "share", "date": "2024-03-15", "content": "Check out this new artist!"},
+            {"type": "post", "date": "2024-03-14", "content": "Sunset paintings are my new favorite."}
+          ]
+        },
+        "followers": 950,
+        "following": 420,
+        "personalInfo": {
+          "img" : " https://images.unsplash.com/photo-1710900791793-487f655010f7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "age": 31,
+          "gender": "Non-binary",
+          "education": {"highestLevel": "Bachelor's", "fieldOfStudy": "Fine Arts", "university": "Modern Art College"}
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,27 @@
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Young Serif', serif;
+    text-decoration:underline;
+    text-align:center;
+    color:darkblue;
+
+}
+button{
+   
+    background-color:chartreuse;
+    color:black;
+}
+button:hover,.std:hover,#str:hover{
+   background-color:pink;
+}
+
+.std{
+    background-color:cornsilk;
+    color:black;
+    font-weight:400;
+}
+#str
+{
+    background-color:cornsilk;
+    color:black;
+}
