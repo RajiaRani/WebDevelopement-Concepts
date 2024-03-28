@@ -4,3 +4,7 @@ import {sum, pi, div} from "./math.js";
 console.log("Sum of two numbers is : ", sum(9,90));
 console.log("Value of Pi : ", pi);
 console.log("Dividing two numbers : ", div(90,89));
+
+import { generate } from "random-words";
+
+console.log("Generate random word :" , generate());
