@@ -1,0 +1,12 @@
+{
+  "name": "moduleconcepts",
+  "version": "1.0.0",
+  "description": "this is my module concepts file",
+  "main": "math.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rajia rani",
+  "license": "ISC",
+  "type" : "module"
+}
