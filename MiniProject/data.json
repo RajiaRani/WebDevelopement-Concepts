@@ -1,0 +1,136 @@
+{
+    "rajia":{
+        "name":"Rajia Rani",
+        "image" : " https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fHww",
+        "education":[
+           {
+            "highest" : [ "MSc(Chemistry)",  "BSc(Non-Medical)"],
+            "clg" :[ "Lovely Professional University (Punjab, India)","PCMD College for Women(Punjab, India)"],
+            "marks" : [" 7 cgpa/10cgpa", "70% (A grade)" ]
+
+           }
+        ],
+        "experience" : [
+            {
+                "exp1" : ["Assistant Proffessor(Chemistry)", "Chemistry Tutor"],
+                "place":["St.Solider College (Jalandhar)","From Home"],
+                "year" : ["3 ", "5"]
+            }
+        ]
+    },
+    "chenchu" :{
+        "name":"Chenchu Reddy",
+        "image" : "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "education":[
+           {
+            "highest" : ["Master in Computer Science", "Lovely Professional University (Punjab, India)"],
+            "clg" : ["University of South Dakota (USA)","Senior Manager in Byjus" ],
+            "marks" : [" 10cgpa/10cgpa","70% (A grade)"]
+
+           }
+        ],
+        "experience" : [
+            {
+                "exp1" :[ "Senior Manager in Byjus", "Chemistry Tutor"],
+                "place":["Hyderbad","From Home"],
+                "year" :[ " 4 ", "5"]
+            }
+        ]
+    },
+    "heema" :{
+        "name":"Heema Rani",
+        "image" : "https://images.unsplash.com/photo-1491349174775-aaafddd81942?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D ",
+        "education":[
+            {
+                "highest" : ["NA", "Lovely Professional University (Punjab, India)"],
+                "clg" : ["NA","Senior Manager in Byjus" ],
+                "marks" : ["NA","70% (A grade)"]
+    
+            }    
+        ],
+        "experience" : [
+            {
+                "exp1" :[ "Senior Manager in Byjus", "Chemistry Tutor"],
+                "place":["Hyderbad","From Home"],
+                "year" :[ " 4 ", "5"]
+            }
+
+        ]
+    },
+    "shiv" :{
+        "name":"Shiv Reddy",
+        "image":"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "education":[
+           {
+            "highest" : ["Master in Computer Science", "Lovely Professional University (Punjab, India)"],
+            "clg" : ["University of South Dakota (USA)","Senior Manager in Byjus" ],
+            "marks" : [" 10cgpa/10cgpa","70% (A grade)"]
+           }
+        ],
+        "experience" : [
+            {
+                "exp1" :[ "Senior Manager in Byjus", "Chemistry Tutor"],
+                "place":["Hyderbad","From Home"],
+                "year" :[ " 4 ", "5"]
+            }
+
+        ]
+    },
+    "rohit" :{
+        "name":"Rohit Sharma",
+        "image" : " https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+        "education":[
+           {
+            "highest" : ["NA", "Lovely Professional University (Punjab, India)"],
+            "clg" : ["NA","Senior Manager in Byjus" ],
+            "marks" : [" 10cgpa/10cgpa","70% (A grade)"]
+           }
+        ],
+        "experience" : [
+            {
+                "exp1" :[ "Senior Manager in Byjus", "Chemistry Tutor"],
+                "place":["Hyderbad","From Home"],
+                "year" :[ " 4 ", "5"]
+            }
+
+        ]
+    },
+    "meenu" :{
+        "name":"Meenu",
+        "image" : "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+        "education":[
+           {
+            "highest" : ["Master in Computer Science", "Lovely Professional University (Punjab, India)"],
+            "clg" : ["University of South Dakota (USA)","Senior Manager in Byjus" ],
+            "marks" : [" NA","70% (A grade)"]
+           }
+        ],
+        "experience" : [
+            {
+            "exp1" :[ "Senior Manager in Byjus", "Chemistry Tutor"],
+            "place":["Hyderbad","From Home"],
+            "year" :[ " 4 ", "5"] 
+            }
+
+        ]
+    },
+    "priya" :{
+        "name":"Priya Devi",
+        "image" : " https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+        "education":[
+           {
+            "highest" : ["NA", "Lovely Professional University (Punjab, India)"],
+            "clg" : ["NA","Senior Manager in Byjus" ],
+            "marks" : ["NA","70% (A grade)"]
+           }
+        ],
+        "experience" : [
+            {
+                "exp1" :[ "Senior Manager in Byjus", "Chemistry Tutor"],
+                "place":["Hyderbad","From Home"],
+                "year" :[ " 4 ", "5"]
+            }
+
+        ]
+    }
+}
