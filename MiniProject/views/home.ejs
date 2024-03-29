@@ -85,13 +85,13 @@
         <div>
             <h2><%= exp.exp1[0] %></h2>
             <p><%= exp.place[0]  %></p>
-            <p><%= exp.year[0] %></p>
+            <p><%= exp.year[0] %> years</p>
         </div>
         <hr class="hrtag">
         <div>
             <h2><%= exp.exp1[1] %></h2>
             <p><%= exp.place[1] %></p>
-            <p><%= exp.year[1] %></p>
+            <p><%= exp.year[1] %> years</p>
         </div>
         <% } %>
     </div>
@@ -139,22 +139,7 @@
         </div>
 
     </div>
-    <div class="footer">
-        <div>
-            <h3>Connect me on :</h3>
-            <div class="footer-navbar">
-                <div class="social-bar">
-                    <a href="https://www.instagram.com/reddyr.c"><i class="fa-brands fa-square-instagram"></i></a>
-                    &nbsp;&nbsp;
-                    <a href="https://www.facebook.com/rajiasyal"><i class="fa-brands fa-square-facebook"></i></a>
-                    &nbsp;&nbsp;
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    &nbsp;&nbsp;
-                    <a href="https://www.github.com/rajiarani"><i class="fa-brands fa-square-github"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <%- include("includes/footer.ejs") %>
 </body>
 
 </html>
