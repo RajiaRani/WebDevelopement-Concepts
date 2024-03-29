@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <h1 style="font-size: 60px; width: 340px;"><%= username %></h1>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#portfolio">Certificates</a></li>
+                <li><a href="#">Experience</a></li>
+                <i class="fa-solid fa-square-xmark icons" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars icons" onclick="openmenu()"></i>
+        </nav>
+        <div class="image-container">
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span><%= username %></span> <br> from India</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
