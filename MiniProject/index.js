@@ -8,6 +8,10 @@ app.use(express.static("public")); // join the style files
 app.use(express.static(path.join(__dirname, "/public/css")));
 app.use(express.static(path.join(__dirname, "/public/js")));
 
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
+
 app.get("/portfolio/:user", (req,res) => {
     let {user} = req.params;
     const userData = require("./data.json");
@@ -20,8 +24,6 @@ app.get("/portfolio/:user", (req,res) => {
     }
 });
 
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "/views"));
 
 app.listen(8080, () => {
     console.log("Listening on port 8080.")
