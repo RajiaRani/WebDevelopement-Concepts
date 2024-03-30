@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            color: black;
+            width: 50%;
+            margin: auto;
+            line-height: 40px;
+        }
+        button{
+            width: 10%;
+            background-color: darkcyan;
+            border: 2px solid rgb(6, 59, 59);
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 18px;
+        }
+        button:hover{
+            background-color:lightgreen;
+            color: black;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <form method="post" action="http://localhost:8080/submittion">
+        <h1>Please Fill this form</h1>
+        <label for="name">Your Name :</label>
+        <input type="text" name="name" id="name" placeholder="Please enter your full legal name ">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email">
+        <br>
+        <button>Submit</button>
+    </form>
+    <script src="app2.js"></script>
+</body>
+</html>

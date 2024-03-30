@@ -2,8 +2,7 @@ const express = require("express");
 const app = express();
 const port = 8080;
 
-app.use(express.urlencoded({extended: true}));
-//humariexpress json data ko bhi pass kare isliye ye use karege
+app.use(express.urlencoded({extended: true})); //humari express json data ko bhi pass kare isliye ye use karege
 app.use(express.json());
 
  app.get("/register", (req,res)=>{
@@ -18,7 +17,11 @@ app.use(express.json());
     res.send(`standard POST response. Welcome ${user}`);
  });
 
-
+app.post("/submittion", (req,res) => {
+   let {name} = req.body;
+   console.log(name);
+   res.send("Form submitted");
+})
 
 app.listen(port,() =>{
     console.log(`I am listening on ${port}`);
