@@ -1,0 +1,54 @@
+<%- include("includes/header.ejs") %>
+<body>
+    <%- include("includes/navbar.ejs") %>
+    <div class="main-container">
+      <div class="left-side">
+        <div class="left-side-card">
+            <div class="img">
+                <img src="<%= info[0].img %>">
+             </div>
+             <div class="text-container">
+                <h2>@<%= info[0].username %></h2>
+                <p><%= info[0].job%></p>
+                <p><%= info[0].study[0] %></p>
+                <button>Open</button>
+                <button>Edit</button>
+             </div>
+        </div>
+        <div class="row">
+         <h2>About Me : </h2>
+         <h3><%= info[0].intro %></h3>
+        </div>
+
+      </div>
+      <div class="right-side">
+        <div class="right-side-card card">
+            <h1>About Me:</h1>
+            <p>Education: <%= info[0].about[0].study[0] %></p>
+            <p>University: <%= info[0].about[0].insitute[0] %></p>
+            <p>Marks: <%= info[0].about[0].mark[0] %></p>
+            <p>Year: <%= info[0].about[0].year[0] %></p>
+            <button>See More</button>
+        </div>
+    
+        <div class="right-side-card">
+            <h1>My Work :</h1>
+            <h3><%= info[0].project[0].title[0] %></h3>
+             <p><%= info[0].project[0].des[0] %></p>
+             <p><%= info[0].project[0].skill[0] %></p>
+             <button>See More</button>
+        </div>
+
+        <div class="right-side-card">
+            <h1>My  Study Content:</h1>
+            
+             <p><%= info[0].content %></p>
+             <button>See More</button>
+             <button>Edit</button>
+             <button>Create New</button>
+        </div>
+      </div>
+      
+    </div>
+    <%- include("includes/footer.ejs") %>
+</body>
