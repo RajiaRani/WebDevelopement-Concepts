@@ -8,7 +8,9 @@
              <h3 class="user">@<%= post.username %></h3>
              <div class="content">
                  <p><%= post.content %></p>
+                 
              </div>
+             <button><a href="http://localhost:3000/posts/<%= post.id %>/edit">Edit</a></button>
              <button><a href="http://localhost:3000/posts/<%= post.id %>">See in details</a></button>
              <hr>
             </div>
