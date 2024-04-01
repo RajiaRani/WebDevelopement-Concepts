@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+    <body>
+        <% for(dta of data){ %>
+        <div class="main-container">
+            
+                <div class="left-side">
+                    <p>Usename : <%= dta.name %>
+                    </p>
+                </div>
+              
+                <div class="middle">
+                 
+                    <div class="middle-content">
+                        <h4>Tell me about yourself :</h4>
+                        <p>
+                            <%= dta.about %>
+                        </p>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                  
+                </div>
+                <div class="right-side">
+              
+                    <p>
+                        <%= dta.content %>
+                    </p>
+             
+                </div>
+               
+        </div>
+       <% } %>
+        <div class="btn">
+        <button>Create New Portfolio</button>
+       </div>
+    </body>
+    </html>
