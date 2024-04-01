@@ -53,6 +53,7 @@ app.patch("/portfolio/:id", (req,res) => {
     //console.log(newContent);
     let info = data.find((d) => id === d.id);
     info.about = newAbout;
+    //console.log(info);
     res.redirect("/portfolio");
 });
 
