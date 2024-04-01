@@ -31,6 +31,16 @@ app.post("/posts", (req,res) => {
     res.redirect("/posts");
 });
 
-app.listen(8080, () => {
-    console.log("I am listening on port 8080.");
+app.get("/posts/:id", (req,res) => {
+    const posts = require("./data.json");
+    let { id } = req.params;
+    //console.log(id);
+    let post = posts.find((p) => id === p.id);
+    //console.log(post);
+    //res.send("done");
+    res.render("show.ejs", {post});
+});
+
+app.listen(3000, () => {
+    console.log("I am listening on port 3000.");
 });

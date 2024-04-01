@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Posts</title>
-    <link rel="stylesheet" href="/css/style.css" />
-</head>
+<%- include("includes/header.ejs") %>
 <body>
-    <h1>My Personal Posts</h1>
-    <% for ( post of posts) { %>
-       <div>
-        <h3 class="user">@<%= post.username %></h3>
-        <div class="content">
-            <p><%= post.content %></p>
-        </div>
-       </div>
-    <% } %>
-    <br>
-    <button><a href="http://localhost:8080/posts/new">Create New Post</a></button>
+    
+    <div class="main-container">
+        <h1>My Personal Posts</h1>
+        <% for ( post of posts) { %>
+            <div class="posts">
+             <h3 class="user">@<%= post.username %></h3>
+             <div class="content">
+                 <p><%= post.content %></p>
+             </div>
+             <button><a href="http://localhost:3000/posts/<%= post.id %>">See in details</a></button>
+             <hr>
+            </div>
+         <% } %>
+         <br>
+         <button class="btn"><a href="http://localhost:3000/posts/new">Create New Post</a></button>
+    </div>
 </body>
 </html>
