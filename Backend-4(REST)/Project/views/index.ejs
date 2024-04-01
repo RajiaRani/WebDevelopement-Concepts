@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+<%- include("includes/header.ejs") %>
     <body>
+        <%- include("includes/navbar.ejs") %>
         <% for(dta of data){ %>
         <div class="main-container">
             
                 <div class="left-side">
-                    <p>Usename : <%= dta.name %>
-                    </p>
+                    <p> <i class="fa-regular fa-user"></i>  <%= dta.name %></p>
+                    <p><i class="fa-solid fa-envelope"></i> <%= dta.email %></p>
                 </div>
               
                 <div class="middle">
@@ -38,7 +32,7 @@
         </div>
        <% } %>
         <div class="btn">
-        <button>Create New Portfolio</button>
+        <button><a href="http://localhost:8080/portfolio/new">Create New Portfolio</a></button>
        </div>
     </body>
     </html>

@@ -32,6 +32,16 @@ app.post("/portfolio",(req,res) => {
     //res.send("done");
 });
 
+app.get("/portfolio/:id", (req,res) => {
+    const data = require("./data.json");
+    let {id} = req.params;
+     //console.log(id);
+    let info = data.find((d) => id === d.id);
+    //console.log(info);
+    res.render("show.ejs");
+    //res.send("working");
+});
+
 
 app.listen(8080, () => {
     console.log("I am listening on port 8080.");
