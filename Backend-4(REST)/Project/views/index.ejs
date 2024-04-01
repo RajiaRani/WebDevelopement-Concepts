@@ -18,18 +18,20 @@
                         </p>
                         <button>Edit</button>
                         <button>Delete</button>
+                        <button><a href="http://localhost:8080/portfolio/<%= dta.id %>">See in Details</a></button>
                     </div>
                   
                 </div>
                 <div class="right-side">
-              
+                    <h4>Content :</h4>
                     <p>
                         <%= dta.content %>
                     </p>
              
                 </div>
-               
+            
         </div>
+        <br> 
        <% } %>
         <div class="btn">
         <button><a href="http://localhost:8080/portfolio/new">Create New Portfolio</a></button>

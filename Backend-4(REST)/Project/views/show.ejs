@@ -1,5 +1,35 @@
 <%- include("includes/header.ejs") %>
 <body>
     <%- include("includes/navbar.ejs") %>
-    <h2></h2>
+        <div class="main-container">
+            
+                <div class="left-side">
+                    <p> <i class="fa-regular fa-user"></i>  <%= info.name %></p>
+                    <p><i class="fa-solid fa-envelope"></i> <%= info.email %></p>
+                    <p><i class="fa-solid fa-id-badge"></i> <%= info.id %></p>
+                </div>
+              
+                <div class="middle">
+                 
+                    <div class="middle-content">
+                        <h4> About yourself :</h4>
+                        <p>
+                            <%= info.about %>
+                        </p>
+                    </div>
+                  
+                </div>
+                <div class="right-side">
+                    <h4>Content :</h4>
+                    <p>
+                        <%= info.content %>
+                    </p>
+             
+                </div>
+        </div>
+        <div class="btn">
+            <button><a href="http://localhost:8080/portfolio">Back to Home Page</a></button>
+        </div>
+        <br> 
+      
 </body>

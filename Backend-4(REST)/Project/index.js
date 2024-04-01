@@ -38,7 +38,7 @@ app.get("/portfolio/:id", (req,res) => {
      //console.log(id);
     let info = data.find((d) => id === d.id);
     //console.log(info);
-    res.render("show.ejs");
+    res.render("show.ejs", {info});
     //res.send("working");
 });
 

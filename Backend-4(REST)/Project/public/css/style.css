@@ -1,6 +1,8 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #48606e;
+    color: aliceblue;
 }
 
 
@@ -109,8 +111,6 @@ nav ul li a:hover::after {
        BUTTON 
 ==========================================================*/
 .btn button{
-    background-color: #48606e;
-    color: white;
     padding: 15px ;
     font-size: 20px;
     border: 1px solid black;
@@ -118,6 +118,7 @@ nav ul li a:hover::after {
     margin-top: 20px;
     text-align: center;
     margin-left: 40%;
+    margin-bottom: 50px;
 }
 .btn button:hover{
     background-color:#ff004f;
@@ -125,7 +126,21 @@ nav ul li a:hover::after {
 }
 .btn button a{
   text-decoration: none;
-  color: white;
+  color: black;
+}
+.middle-content button{
+  padding: 4px 6px;
+  font-size: 15px;
+  border: 2px solid black;
+  border-radius: 6px;
+}
+.middle-content button a{
+    text-decoration: none;
+    color:black;
+}
+.middle-content button:hover{
+    background-color:#ff004f;
+    box-shadow: 0 0 15px black;
 }
 /* ============================================================ 
       NEW 
