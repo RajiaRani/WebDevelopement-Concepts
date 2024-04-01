@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const { v4: uuidv4 } = require("uuid");// to create the id
 
 const fs = require("fs"); // for json data
 
@@ -10,7 +11,14 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
-
+let posts = [];
+// Load existing posts from data.json if it exists
+if (fs.existsSync('./data.json')) {
+    posts = require('./data.json');
+} else {
+    // If data.json doesn't exist, initialize posts as an empty array
+    fs.writeFileSync('./data.json', JSON.stringify(posts)); // Create an empty data.json file
+}
 
 app.get("/posts", (req,res) => {
     const posts = require("./data.json");
