@@ -16,7 +16,7 @@ let  info = [
         gender:"female",
         study:["MSc(Chemisrty)", "BSc(Non-Medical)"],
         intro:"hello i am rajia",
-        skill:"html, css, js",
+        skill:["html", "css","js","c++"],
         about:[
             {
                 study:["MSc(Chemistry)", "BSc(Non-Medical) "],
@@ -39,6 +39,9 @@ let  info = [
 app.get("/resume", (req,res) => {
   //console.log(info);
   res.render("index.ejs", {info});
+});
+app.get("/resume/new", (req,res) => {
+ res.render("new.ejs");
 });
 
 app.listen(8080, () => {

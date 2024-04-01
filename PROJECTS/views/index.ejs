@@ -19,10 +19,19 @@
          <h2>About Me : </h2>
          <h3><%= info[0].intro %></h3>
         </div>
+        <div class="row">
+            <h2>Skills :</h2>
+            <ul>
+                <li><%= info[0].skill[0] %></li>
+                <li><%= info[0].skill[1] %></li>
+                <li><%= info[0].skill[2] %></li>
+                <li><%= info[0].skill[3] %></li>
+            </ul>
+        </div>
 
       </div>
       <div class="right-side">
-        <div class="right-side-card card">
+        <div class="right-side-card card row">
             <h1>About Me:</h1>
             <p>Education: <%= info[0].about[0].study[0] %></p>
             <p>University: <%= info[0].about[0].insitute[0] %></p>
@@ -31,7 +40,7 @@
             <button>See More</button>
         </div>
     
-        <div class="right-side-card">
+        <div class="right-side-card row">
             <h1>My Work :</h1>
             <h3><%= info[0].project[0].title[0] %></h3>
              <p><%= info[0].project[0].des[0] %></p>
@@ -39,7 +48,7 @@
              <button>See More</button>
         </div>
 
-        <div class="right-side-card">
+        <div class="right-side-card row">
             <h1>My  Study Content:</h1>
             
              <p><%= info[0].content %></p>

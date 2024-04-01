@@ -27,6 +27,7 @@ h1, h2{
     font-weight: 500;
     color: var(--text-color-700);
     font-size: 28px;
+    color: aqua;
 }
 a{
     text-decoration: none;
@@ -103,7 +104,8 @@ p{
 }
 
 .row{
-    background-color: aqua;
+    padding: 15px;
+    text-transform: capitalize;
 }
 
 .right-side{
