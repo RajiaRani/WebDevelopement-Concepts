@@ -13,8 +13,9 @@ body{
 .main-container{
  width: 50%;
  margin: auto;
- border: 3px solid #feebb0;
- padding: 20px 30px 20px 30px;
+ border-left: 3px solid #feebb0;
+ border-right: 3px solid #feebb0;
+ padding: 40px 30px 20px 30px;
  border-radius: 10px;
 }
 .posts{
@@ -55,4 +56,23 @@ button a{
 .btn:hover{
     background-color: #96ae74;
     transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+input, textarea{
+    background-color: #96ae74;
+    width: 50vw;
+    padding: 6px;
+    border: 1px solid black;
+    border-radius: 6px;
+    transition: box-shadow 0.3s ease;
+   margin-top: 10px;
+}
+ textarea:hover, 
+ input:hover{
+  background-color:#feebb0;
+  border: 1px solid black;
+  border-radius: 6px;
+  box-shadow: 0 0 2px 2px #ffb6c1;
 }
