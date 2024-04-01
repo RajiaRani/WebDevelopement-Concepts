@@ -1,0 +1,24 @@
+<%- include("includes/header.ejs") %>
+<body>
+    <%- include("includes/navbar.ejs") %>
+        <div class="main-container">
+            <form method="post" action="/portfolio/<%= info.id %>?_method=PATCH">
+                <div class="port-new">
+                         <h2>Username : @<%= info.name %></h2>
+                         <h3>UserID : <%= info.id %></h3>
+                         <h3>Email : <%= info.email %></h3>
+                          <div class="about">
+                            <label for="about">Write about yourself :</label> <br>
+                            <textarea id="about" rows="3" required class="new" name="about">
+                                <%= info.about %>
+                            </textarea>
+                          </div>
+                          <br>
+                         <div class="btn new-btn">
+                            <button class="btn btn-dark">Submit</button>
+                         </div>
+                </div>
+            </form>
+        </div>
+      
+</body>

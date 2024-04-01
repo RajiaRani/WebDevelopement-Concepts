@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const bodyParser = require("body-parser");
+const methodOverride = require("method-override");
 
+app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const fs = require("fs"); // for json data
@@ -40,6 +42,25 @@ app.get("/portfolio/:id", (req,res) => {
     //console.log(info);
     res.render("show.ejs", {info});
     //res.send("working");
+});
+
+//edit the content and about section
+app.patch("/portfolio/:id", (req,res) => {
+    const data  = require("./data.json");
+    let { id } = req.params;
+    //console.log(id);
+    let newAbout = req.body.about;
+    //console.log(newContent);
+    let info = data.find((d) => id === d.id);
+    info.about = newAbout;
+    res.redirect("/portfolio");
+});
+
+app.get("/portfolio/:id/edit", (req,res) => {
+    const data = require("./data.json");
+    let { id } = req.params;
+    let info = data.find((d) => id === d.id);
+   res.render("edit.ejs" , {info});
 });
 
 
