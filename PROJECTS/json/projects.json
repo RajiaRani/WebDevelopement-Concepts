@@ -1,20 +1,8 @@
 [
     {
-        " id": "uuidv4()",
-        " title": [
-            "Mini Project using HTML and CSS",
-            "Project based on API'S",
-            "Wonderlust Demo"
-        ],
-        "des": [
-            "Mini Project decription heree!!",
-            "APIs decription heree!!",
-            "wonderlust decription heree!!"
-        ],
-        " skill": [
-            "HTML , CSS",
-            "HTML, CSS, JS, API'S",
-            "HTML, CSS, JS, API'S, MongoDB, Express"
-        ]
+        "id": "uuidv4()",
+        "title": "Mini Project using HTML and CSS",
+        "des": "Mini Project decription heree!!",
+        "skill": "HTML , CSS"
     }
 ]

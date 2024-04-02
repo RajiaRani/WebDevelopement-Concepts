@@ -1,10 +1,7 @@
 [
-    {   "id": "uuidv4()",
-      "  skills":["html", "css","js","c++","c","sql","mongoDB"],
-        "course":[{
-           " insitute":["coursera", "coursera"],
-            "title":["html and css", "full stack"],
-            "date":["29 july 2021", "3 feb 2022"]
-        }]
+     { 
+    "id": "uuidv4()",
+     "skill":"html"
     }
+
 ]

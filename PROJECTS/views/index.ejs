@@ -1,101 +1,110 @@
 <%- include("includes/header.ejs") %>
-<body>
+
+  <body>
     <%- include("includes/navbar.ejs") %>
-    <div class="main-container">
-      <div class="left-side">
-        <div class="left-side-card">
+      <div class="main-container">
+        <div class="left-side">
+          <div class="left-side-card">
+            <% for ( user of users) { %>
             <div class="img">
-                <img src="<%= info[0].img %>">
-             </div>
-             <div class="text-container">
-                <h2>@<%= info[0].username %></h2>
-                <p><%= info[0].job%></p>
-                <p><%= info[0].study[0] %></p>
-                <button>Open</button>
-                <button>Edit</button>
-             </div>
-        </div>
-        <div class="row">
-         <h2>About Me : </h2>
-         <h3><%= info[0].intro %></h3>
-        </div>
-        <div class="row">
+              <img src="<%= user.img %>">
+            </div>
+            <div class="text-container">
+              <h2>@ <%= user.username%></h2>
+              <p><%= user.job%></p>
+              <p><%= user.study %></p>
+              <p><%= user.gender %></p>
+              <button>Open</button>
+              <button>Edit</button>
+            </div>
+          <% } %>
+          </div>
+          <div class="row">
+            <h2>About Me : </h2>
+            <h3><%= about.intro %></h3>
+          </div>
+          <div class="row">
             <h2><i class="fa-regular fa-id-badge"></i> Skills :</h2>
             <div class="skill-content">
-                <% for(let i of info) { %>
-                    <p><%= i.skill[0] %></p> 
-                    <p><%= i.skill[1] %></p>
-                    <p><%= i.skill[2] %></p>
-                    <p><%= i.skill[3] %></p>
-                    <p><%= i.skill[4] %></p>
-                    <p><%= i.skill[5] %></p>
-                    <% } %> 
+              <% for ( let s of skills) { %>
+                <p><%= s.skill %></p> <br>
+              
+              <% } %>
             </div>
-            <button><i class="fa-solid fa-pen"></i></button>  
-        </div>
+            <button><i class="fa-solid fa-pen"></i></button>
+          </div>
+          <div class="row">
+            <div class="skill-content">
+              <% for(let c of course)  {%>
+                <p>Course :<%= c.course %></p>
+                <p>Date : <%= c.date %></p>
+                <p>Title :<%= c.course_name %></p>
+                <p>Description : <%= c.course_des %></p>
+                <% } %>
+            </div>
+          </div>
 
-      </div>
-      <div class="right-side">
-        <div class="right-side-card card row">
+        </div>
+        <div class="right-side">
+          <div class="right-side-card card row">
             <h1>About Me:</h1>
             <div class="about-container">
-              <% for(let i of info) { %>
+              <% for(let i of about) { %>
                 <div class="about-me">
-                    <p><i class="fa-solid fa-chevron-right"></i> Name : <%= i.username %></p>
-                    <p><i class="fa-solid fa-chevron-right"></i> Email : <%= i.email %></p>
-                    <p><i class="fa-solid fa-chevron-right"></i> </p>
-                    <p><i class="fa-solid fa-chevron-right"></i> </p>
+                  <p><i class="fa-solid fa-chevron-right"></i> Name : <%= i.username%> </p>
+                  <p><i class="fa-solid fa-chevron-right"></i> Email :<%= i.email %> </p>
+                  <p><i class="fa-solid fa-chevron-right"></i>Website : <%= i.website %> </p>
+                  <p><i class="fa-solid fa-chevron-right"></i>Phone : <%= i.phone %> </p>
                 </div>
-                
+
                 <div class="about-me">
-                    <p><i class="fa-solid fa-graduation-cap"></i> Education: <%= i.about[0].study[0] %></p>
-                    <p><i class="fa-solid fa-building-columns"></i> University: <%= i.about[0].insitute[0] %></p>
-                    <p><i class="fa-solid fa-award"></i> Marks: <%= i.about[0].mark[0] %></p>
-                    <p><i class="fa-regular fa-calendar"></i> Year: <%= i.about[0].year[0] %></p>    
+                  <p><i class="fa-solid fa-graduation-cap"></i> Education: <%= i.study %></p>
+                  <p><i class="fa-solid fa-building-columns"></i> University: <%= i.insitute %></p>
+                  <p><i class="fa-solid fa-award"></i> Marks: <%= i.mark %></p>
+                  <p><i class="fa-regular fa-calendar"></i> Year: <%= i.year %></p>
                 </div>
                 <% } %>
-              </div>
-            <button class="btns"><a href="http://localhost:8080/resume/<%= info.id %>">See More</a></button>
-           
-        </div>
-    
-        <div class="right-side-card row">
+            </div>
+            <button class="btns"><a href="http://localhost:8080/resume/<%= about.id %>">See More</a></button>
+
+          </div>
+
+          <div class="right-side-card row">
             <div class="row">
-                <h1><i class="fa-solid fa-gear"></i> My Work :</h1>
-                <% for(let i of info){ %>
-                    <% if (i.project && i.project.length > 0) { %>
-                        <% for (let project of i.project) { %>
-                <div class="col-sm-6 mb-3 mb-sm-0">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title"><i class="fa-solid fa-rocket"></i> <%= project.title[0] %></h5>
-                      <p class="card-text">technoligy Used: <%= project.skill[0] %></p>
-                      <p class="card-text"> <%= project.des[0] %></p>
-                      <a href="#" class="btn btn-primary">See More</a>
+              <h1><i class="fa-solid fa-gear"></i> My Work :</h1>
+              <% for(let project of projects){ %>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fa-solid fa-rocket"></i>
+                            <%= project.title %>
+                          </h5>
+                          <p class="card-text">technoligy Used: <%= project.skill %>
+                          </p>
+                          <p class="card-text">
+                            <%= project.des %>
+                          </p>
+                          <a href="#" class="btn btn-primary">See More</a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                   
-                <% } %>
-                <% } %>
-            <% } %>
-              </div>
+                    <% } %>
+            </div>
+          </div>
+
+          <div class="right-side-card row">
+            <h1>My Study Content:</h1>
+            <% for(let i of contents){ %>
+              <p>Title : <%= i.title %></p>
+              <p>Subject : <%= i.subject %></p>
+              <p>Description : <%= i.des %></p>
+              <button><a href="http://localhost:8080/resume/<%= i.id %>">See More</a></button>
+              <button>Edit</button>
+              <% } %>
+             <button class="btns"><a href="http://localhost:8080/resume/new">Create New</a></button>
+          </div>
         </div>
 
-        <div class="right-side-card row">
-            <h1>My Study Content:</h1>
-            <% for(let i of info){ %>
-            <p>Title : <%= i.content[0].title %></p>
-            <p>Subject : <%= i.content[0].subject %></p>
-            <p>Description : <%= i.content[0].des %></p>
-            <button><a href="http://localhost:8080/resume/<%= i.id %>">See More</a></button>
-            <button>Edit</button>
-             <% } %>
-             
-            <button class="btns"><a href="http://localhost:8080/resume/new">Create New</a></button>
-        </div>
       </div>
-      
-    </div>
-    <%- include("includes/footer.ejs") %>
-</body>
+      <%- include("includes/footer.ejs") %>
+  </body>

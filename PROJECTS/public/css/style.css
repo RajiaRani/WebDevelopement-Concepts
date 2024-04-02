@@ -102,9 +102,7 @@ p{
 .left-side .skill-content{
 background-color: #6a654baa;
 padding: 10px;
-display: grid;
-grid-template-columns: repeat(7,1fr);
-grid-template-rows: repeat(auto,1fr);
+
 }
 .row{
     padding: 15px;
