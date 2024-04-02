@@ -49,12 +49,13 @@
         </div>
 
         <div class="right-side-card row">
-            <h1>My  Study Content:</h1>
-            
-             <p><%= info[0].content %></p>
+            <h1>My Study Content:</h1>
+            <% for(let i of info){ %>
+            <p><%= i.content %></p>
              <button>See More</button>
              <button>Edit</button>
-             <button>Create New</button>
+             <% } %>
+            <button><a href="http://localhost:8080/resume/new">Create New</a></button>
         </div>
       </div>
       

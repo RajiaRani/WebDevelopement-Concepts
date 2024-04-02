@@ -40,8 +40,20 @@ app.get("/resume", (req,res) => {
   //console.log(info);
   res.render("index.ejs", {info});
 });
+
+/* Send the get request for render the new page*/
 app.get("/resume/new", (req,res) => {
  res.render("new.ejs");
+});
+
+app.post("/resume", (req,res) => {
+    let { content } = req.body;
+    info.push({content});
+    //console.log(info);
+   //console.log(content);
+   //res.send("working");
+   res.redirect("/resume");
+
 });
 
 app.listen(8080, () => {
