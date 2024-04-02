@@ -39,20 +39,23 @@
         <div class="right-side-card card row">
             <h1>About Me:</h1>
             <div class="about-container">
+              <% for(let i of info) { %>
                 <div class="about-me">
-                    <p><i class="fa-solid fa-chevron-right"></i> Rajia Rani</p>
-                    <p><i class="fa-solid fa-chevron-right"></i> rajiarani.syal@gmail.com</p>
-                    <p><i class="fa-solid fa-chevron-right"></i> Phone: 8360719956</p>
-                    <p><i class="fa-solid fa-chevron-right"></i> Website: www.domain.com</p>
+                    <p><i class="fa-solid fa-chevron-right"></i> Name : <%= i.username %></p>
+                    <p><i class="fa-solid fa-chevron-right"></i> Email : <%= i.email %></p>
+                    <p><i class="fa-solid fa-chevron-right"></i> </p>
+                    <p><i class="fa-solid fa-chevron-right"></i> </p>
                 </div>
+                
                 <div class="about-me">
-                    <p><i class="fa-solid fa-graduation-cap"></i> Education: <%= info[0].about[0].study[0] %></p>
-                    <p><i class="fa-solid fa-building-columns"></i> University: <%= info[0].about[0].insitute[0] %></p>
-                    <p><i class="fa-solid fa-award"></i> Marks: <%= info[0].about[0].mark[0] %></p>
-                    <p><i class="fa-regular fa-calendar"></i> Year: <%= info[0].about[0].year[0] %></p>    
+                    <p><i class="fa-solid fa-graduation-cap"></i> Education: <%= i.about[0].study[0] %></p>
+                    <p><i class="fa-solid fa-building-columns"></i> University: <%= i.about[0].insitute[0] %></p>
+                    <p><i class="fa-solid fa-award"></i> Marks: <%= i.about[0].mark[0] %></p>
+                    <p><i class="fa-regular fa-calendar"></i> Year: <%= i.about[0].year[0] %></p>    
                 </div>
+                <% } %>
             </div>
-            <button class="btns">See More</button>
+            <button class="btns"><a href="http://localhost:8080/resume/<%= info.id %>">See More</a></button>
         </div>
     
         <div class="right-side-card row">

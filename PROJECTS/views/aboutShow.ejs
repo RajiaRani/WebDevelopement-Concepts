@@ -1,0 +1,24 @@
+<%- include("includes/header.ejs") %>
+<body>
+    <%- include("includes/navbar.ejs") %>
+    <div class="showing-container">
+        <h1>About Me:</h1>
+        <div></div>
+        <div class="content-head">
+        <div class="about-container">
+            <div class="about-me">
+                <p><i class="fa-solid fa-chevron-right"></i> Rajia Rani</p>
+                <p><i class="fa-solid fa-chevron-right"></i> rajiarani.syal@gmail.com</p>
+                <p><i class="fa-solid fa-chevron-right"></i> Phone: 8360719956</p>
+                <p><i class="fa-solid fa-chevron-right"></i> Website: www.domain.com</p>
+            </div>
+            <div class="about-me">
+                <p><i class="fa-solid fa-graduation-cap"></i> Education: <%= info[0].about[0].study[0] %></p>
+                <p><i class="fa-solid fa-building-columns"></i> University: <%= info[0].about[0].insitute[0] %></p>
+                <p><i class="fa-solid fa-award"></i> Marks: <%= info[0].about[0].mark[0] %></p>
+                <p><i class="fa-regular fa-calendar"></i> Year: <%= info[0].about[0].year[0] %></p>    
+            </div>
+        </div>
+    </div>
+    <%- include("includes/footer.ejs") %>
+</body>

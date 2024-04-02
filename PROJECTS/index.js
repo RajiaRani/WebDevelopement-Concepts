@@ -70,6 +70,12 @@ app.get("/resume/:id", (req,res) => {
    //console.log(Info);
    res.render("show.ejs", {Info});
 });
+/* Showing the About Page */
+app.get("/resume/:id", (req,res)=> {
+    let { id } = req.params;
+    let Info = info.find((i) => id === i.id);
+    res.render("aboutShow.ejs", {Info});
+});
 
 // app.get("/resume/:id/show", (req,res) => {
 //     res.render("show.ejs");
