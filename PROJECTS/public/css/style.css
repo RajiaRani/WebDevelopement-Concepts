@@ -134,25 +134,26 @@ grid-template-rows: repeat(auto,1fr);
 .showing-container{
     width: 70%;
     margin: auto;
-    height: 500px;
-    max-height: 100vh;
+    height: 100vh;
+    background-color: var(--text-color-100);
+    padding: 15px;
+    color: var(--bg-color-900);
+    box-shadow: 0 0 10px rgba(255,255,255,0.8);
 }
 .showing-container .content{
     background-color: #e8e6e6;
     color: black;
     border: 1px solid var(--bg-color-100);
     border-radius: 10px;
-    padding: 10px;
-   
+    padding: 15px 20px 20px 20px;
 }
 
 .content-head{
-    background-color: #fe5757;
-    padding: 10px 10px 0px 10px;
+    padding: 15px 10px 0px 15px;
 }
 .content-des{
-    background-color: #b6b3b3;
-   padding: 15px;
+   background-color: #b6b3b3;
+   padding: 18px;
    line-height: 1.9;
    border-radius: 10px;
 }
