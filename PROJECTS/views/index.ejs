@@ -81,10 +81,13 @@
         <div class="right-side-card row">
             <h1>My Study Content:</h1>
             <% for(let i of info){ %>
-            <p><%= i.content %></p>
-             <button>See More</button>
+            <p>Title : <%= i.content[0].title %></p>
+            <p>Subject : <%= i.content[0].subject %></p>
+            <p>Description : <%= i.content[0].des %></p>
+            <button><a href="http://localhost:8080/resume/<%= i.id %>">See More</a></button>
              <button>Edit</button>
              <% } %>
+             
             <button class="btns" ><a href="http://localhost:8080/resume/new">Create New</a></button>
         </div>
       </div>

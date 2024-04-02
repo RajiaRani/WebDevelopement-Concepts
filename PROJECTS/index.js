@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 let  info = [
     {
         username:"rajia rani",
-        id:uuidv4(),
+        id:"12345ab",
         email:"rajia@gmail.com",
         job:"Assistant Professor",
         gender:"female",
@@ -33,7 +33,13 @@ let  info = [
           skill:["HTML , CSS", "HTML, CSS, JS, API'S", "HTML, CSS, JS, API'S, MongoDB, Express"],
         }],
          
-        content:"my content ",
+        content:[
+            {
+                title:"Topic HTML",
+                subject:"html,css",
+                des:"here i am writing the subject related information.here i am writing the subject related information here i am writing the subject related information here i am writing the subject related information here i am writing the subject related information here i am writing the subject related information",
+            }
+        ],
         img:"https://images.unsplash.com/photo-1485875437342-9b39470b3d95?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     }
 ];
@@ -57,6 +63,17 @@ app.post("/resume", (req,res) => {
    res.redirect("/resume");
 
 });
+
+app.get("/resume/:id", (req,res) => {
+   let { id } = req.params;
+   let Info = info.find((i) => id === i.id);
+   //console.log(Info);
+   res.render("show.ejs", {Info});
+});
+
+// app.get("/resume/:id/show", (req,res) => {
+//     res.render("show.ejs");
+// });
 
 app.listen(8080, () => {
     console.log("I am listening on port 8080.");
