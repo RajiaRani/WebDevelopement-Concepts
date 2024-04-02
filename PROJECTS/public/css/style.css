@@ -76,16 +76,15 @@ p{
 }
 
 .left-side{
-    width: 30%;
+    width: 22%;
     border-right: 5px solid var(--text-color-500);
     text-transform: capitalize;
 }
 .left-side-card{
-    margin: auto;
-    flex: 0 0 70%;
-    max-width: 70%;
     display: flex;
     align-items: center;
+    justify-content:space-evenly;
+    padding: 10px 5px 5px 5px;
 }
 .left-side-card:hover{
     box-shadow: 0 0 14px var(--text-hover);
@@ -95,21 +94,38 @@ p{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    padding: 10px;
-    margin: 20px 10px 10px 20px ;
 }
 .text-container{
     line-height: 10px;
-    padding: 10px;
+   
 }
-
+.left-side .skill-content{
+background-color: #6a654baa;
+padding: 10px;
+display: grid;
+grid-template-columns: repeat(7,1fr);
+grid-template-rows: repeat(auto,1fr);
+}
 .row{
     padding: 15px;
-    text-transform: capitalize;
 }
 
 .right-side{
     width: 67%;
+}
+.right-side .right-side-card {
+   margin-bottom: 10px;
+   border: 2px solid var(--text-color-900);
+  margin: 20px;
+
+}
+.right-side .right-side-card  .about-container{
+    display: flex;
+    width: 100%;
+}
+.about-container .about-me{
+    width: 50%;
+    padding: 10px 20px;
 }
 
 

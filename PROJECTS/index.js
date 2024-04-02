@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const { v4: uuidv4 } = require('uuid');
 
 app.use(express.urlencoded({ extended:true }));
 
@@ -11,12 +12,13 @@ app.use(express.static(path.join(__dirname, "public")));
 let  info = [
     {
         username:"rajia rani",
+        id:uuidv4(),
         email:"rajia@gmail.com",
         job:"Assistant Professor",
         gender:"female",
         study:["MSc(Chemisrty)", "BSc(Non-Medical)"],
         intro:"hello i am rajia",
-        skill:["html", "css","js","c++"],
+        skill:["html", "css","js","c++","c","sql","mongoDB"],
         about:[
             {
                 study:["MSc(Chemistry)", "BSc(Non-Medical) "],
@@ -47,8 +49,8 @@ app.get("/resume/new", (req,res) => {
 });
 
 app.post("/resume", (req,res) => {
-    let { content } = req.body;
-    info.push({content});
+    let { content , id } = req.body;
+    info.push({content, id});
     //console.log(info);
    //console.log(content);
    //res.send("working");
