@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const fs = require("fs");
 const { v4: uuidv4 } = require('uuid');
 
 app.use(express.urlencoded({ extended:true }));
@@ -38,22 +39,33 @@ app.get("/resume/new", (req,res) => {
  res.render("new.ejs");
 });
 
-app.post("/resume", (req,res) => {
+app.post("/resume/content", (req,res) => {
     let { content , id } = req.body;
-    info.push({content, id});
-    //console.log(info);
-   //console.log(content);
-   //res.send("working");
+     info.push({content, id});
+//     //console.log(info);
+//    //console.log(content);
+//    //res.send("working");
    res.redirect("/resume");
 
 });
 
+// For skills container
 app.get("/resume/:id", (req,res) => {
    let { id } = req.params;
-   let Info = info.find((i) => id === i.id);
-   console.log(Info.content.id);
+   let skill = skillsData.find((skill) => id === skill.id);
+   console.log(skill);
+   res.render("skill.ejs", {skill});
   
 });
+app.post("/resume/skill", (req,res) => {
+   let { id, skill} = req.body;
+   skillsData.push({skill, id});
+   console.log(skillsData);
+});
+
+app.get("/resume/:id", (req,res) => {
+  
+})
 
 
 /* Showing the About Page */

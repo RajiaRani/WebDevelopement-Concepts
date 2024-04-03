@@ -1,0 +1,23 @@
+<%- include("includes/header.ejs") %>
+<body>
+    <%- include("includes/navbar.ejs") %>
+   
+    <div class="showing-container">
+        <h2>Add New Skills:</h2>
+         <div>
+            <div class="content-head">
+            
+            </div>
+          <div class="content">
+      
+           <form method="post" action="/resume">
+            <input type="text" placeholder="enter skill" name="skill">
+            <button>Add</button>
+           </form>
+             
+          </div>
+         </div>
+         <button class="btn"><a href="http://localhost:8080/resume">Back</a></button>
+    </div>
+    <%- include("includes/footer.ejs") %>
+</body>
