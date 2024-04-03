@@ -161,7 +161,16 @@ padding: 10px;
 p{
     font-size: 23px;
 }
-
+/* =======================================
+   FORM Section
+============================================ */
+.form-container{
+    width: 100vw;
+    margin: auto;
+}
+textarea{
+    width: 80%;
+}
 
 /* =======================================
       FOOTER Section

@@ -2,11 +2,15 @@
 <body>
     <%- include("includes/navbar.ejs") %>
     <div class="main-container">
+        <div class="form-container">
+            <div class="content-head">
         <form method="post" action="/resume">
             <label for="content">Create New Content :</label> <br>
             <textarea name="content" id="content"  rows="10"></textarea> <br>
             <button>Submit</button>
         </form>
+        </div>
+    </div>
     </div>
     <%- include("includes/footer.ejs") %>
 </body>
