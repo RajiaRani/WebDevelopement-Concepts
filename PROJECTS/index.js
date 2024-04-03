@@ -92,7 +92,7 @@ app.get("/resume/new", (req,res) => {
 
 app.post("/resume/content", (req,res) => {
     let { content , id } = req.body;
-     info.push({content, id});
+     contentsData.push({content, id});
 //     //console.log(info);
 //    //console.log(content);
 //    //res.send("working");
@@ -103,8 +103,8 @@ app.post("/resume/content", (req,res) => {
 // For skills container
 app.get("/resume/skills/:id", (req,res) => {
    let { id } = req.params;
-   let skill = skillsData.find((skill) => id === skill.id);
-   console.log(skill);
+   let skill = skillsData.find((s) => id === s.id);
+   //console.log(skill);
    res.render("skill.ejs", {skill});
   
 });
