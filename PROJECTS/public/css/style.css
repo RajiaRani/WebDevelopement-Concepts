@@ -70,13 +70,16 @@ p{
     Main-Container Section
 ============================================ */
 .main-container{
-    width: 100vw;
+    width: 75%;
+    margin: auto;
     display: flex;
-    height: 100vh;
+    border-left: solid var(--text-color-900);
+    border-right: solid var(--text-color-900);
+    overflow: visible;
 }
 
 .left-side{
-    width: 22%;
+    width: 28%;
     border-right: 5px solid var(--text-color-500);
     text-transform: capitalize;
 }
@@ -109,7 +112,7 @@ padding: 10px;
 }
 
 .right-side{
-    width: 67%;
+  width: 72%;
 }
 .right-side .right-side-card {
    margin-bottom: 10px;
