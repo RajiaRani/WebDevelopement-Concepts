@@ -28,11 +28,9 @@
             <div class="skill-content">
               <% for ( let s of skills) { %>
                 <p><%= s.skill %></p> <br>
-                <button><a href="http://localhost:8080/resume/<%= s.id %>"><i class="fa-solid fa-pen"></i></a></button>
-              <% } %>
-             
+                <% } %>
             </div>
-           
+            <button><a href="http://localhost:8080/resume/skills/<%= skills.id %>"><i class="fa-solid fa-pen"></i></a></button>
           </div>
           <div class="row">
             <div class="skill-content">
