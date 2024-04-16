@@ -61,6 +61,9 @@ p{
     transition: color 0.3s ease;
     transition: transform 0.4s ease;
 }
+.navbar .nav .nav-item a{
+    color: var(--text-color-900);
+}
 .navbar .nav .nav-item:hover{
     color: var(--text-hover);
     transform: scale(1.2);
@@ -103,7 +106,7 @@ p{
    
 }
 .left-side .skill-content{
-background-color: #6a654baa;
+background-color: darkslategray;
 padding: 10px;
 
 }
