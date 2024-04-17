@@ -8,9 +8,9 @@ body{
     color:var(--text-color-100) ;
 }
 :root{
-    --bg-color-900:#000;
+    --bg-color-900:#212F3C;
     --bg-color-700:#202020;
-    --bg-color-500:#404040;
+    --bg-color-500:#D6DBDF;
     --bg-color-100:#808080;
     --text-color-900:#e7e6e6;
     --text-color-700: #dddddd;
@@ -62,7 +62,7 @@ p{
     transition: transform 0.4s ease;
 }
 .navbar .nav .nav-item a{
-    color: var(--text-color-900);
+    color: var(--bg-color-900);
 }
 .navbar .nav .nav-item:hover{
     color: var(--text-hover);
@@ -190,7 +190,7 @@ textarea{
     font-size: 22px;
     text-transform: capitalize;
     margin: 0 0 5px;
-
+    color: var(--bg-color-900);
 }
 .footer .contact-info-item .social-media-links a{
     display: inline-flex;
@@ -206,10 +206,11 @@ textarea{
     cursor: pointer;
     margin: 6px 4px 0 0;
     transition: all 0.3s ease;
+    color: var(--bg-color-900);
 }
 .contact-info-item .social-media-links a:hover{
-    color: var(--white);
-    background-color: var(--blue);
+    color: var(--text-hover);
+    background-color: var(--bg-color-900);
 }
 
 
