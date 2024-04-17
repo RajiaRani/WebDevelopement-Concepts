@@ -8,7 +8,7 @@ body{
     color:var(--text-color-100) ;
 }
 :root{
-    --bg-color-900:#1b1b1b;
+    --bg-color-900:#000;
     --bg-color-700:#202020;
     --bg-color-500:#404040;
     --bg-color-100:#808080;
