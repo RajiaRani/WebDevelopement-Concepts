@@ -16,7 +16,7 @@ body{
     --text-color-700: #dddddd;
     --text-color-500: #faf8ed;
     --text-color-100: #fcfcf6;
-    --text-hover:#fe5757;
+    --text-hover:rgb(255, 45, 4);
 }
 
 
@@ -47,13 +47,17 @@ p{
 .navbar{
     background-color: var(--bg-color-500);
 }
+.navbar  h3{
+    margin-left: 250px;
+    color: var(--bg-color-900);
+}
 .navbar .nav{
-  width: 70%;
-  margin: auto;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 10px;
+  padding: 15px 10px;
+  margin-right: 250px;
 }
 .navbar .nav .nav-item{
     font-size: 20px;
@@ -64,9 +68,8 @@ p{
 .navbar .nav .nav-item a{
     color: var(--bg-color-900);
 }
-.navbar .nav .nav-item:hover{
+.navbar .nav .nav-item a:hover{
     color: var(--text-hover);
-    transform: scale(1.2);
     cursor: pointer;
 }
 /* =======================================
