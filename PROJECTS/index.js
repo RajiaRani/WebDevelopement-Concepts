@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
-/* Data is defining here */
+/* ------------------ Data is defining here ---------------------------- */
 let usersData = [
     {
         id: uuidv4(),
@@ -108,6 +108,7 @@ app.get("/resume/skills/:id", (req,res) => {
    res.render("skill.ejs", {skill});
   
 });
+
 app.post("/resume", (req,res) => {
    let { id, skill} = req.body;
    skillsData.push({skill, id});
@@ -119,12 +120,9 @@ app.get("/resume/:id", (req,res) => {
   
 })
 
-
 /* Showing the About Page */
-app.get("/resume/:id", (req,res)=> {
-    let { id } = req.params;
-    let Info = info.find((i) => id === i.id);
-    res.render("aboutShow.ejs", {Info});
+app.get("/resume/aboutshow", (req,res)=> {
+    res.render("aboutShow.ejs");
 });
 
 // app.get("/resume/:id/show", (req,res) => {
