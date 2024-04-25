@@ -29,12 +29,6 @@ console.log(err);
  });
 
 
-
-
-
-
-
-
 // User.findByIdAndDelete({_id:"656e593ae2af683a933ef6a3"}) .then((res) => {
 //     console.log(res);
 // }) .catch((err) => {
@@ -80,6 +74,7 @@ console.log(err);
 // console.log(err)
 //});
 
+
 // User.insertMany([
 //     {name: "rajia syal", email: "rajia@gmail.com", age:27, marks:89},
 //     {name: "syal", email: "raj@gmail.com", age:26, marks:79},
@@ -91,6 +86,7 @@ console.log(err);
 //     console.log(res);
 // });
 
+
 // User.find({ age: { $gte: 27 }}).then((res) =>{
 //     console.log(res[0].name);
 //     //console.log(res[0]);
@@ -99,12 +95,14 @@ console.log(err);
 //     console.log(err);
 // });
 
+
 // User.findOne({ _id: '656e7529255d3f72d49d1e3c'})
 // .then((res)=>{
 //     console.log(res);
 // }).catch((err) => {
 //   console.log(err);
 // });
+
 
 // User.findById('656e7529255d3f72d49d1e3c')
 // .then((res)=>{
