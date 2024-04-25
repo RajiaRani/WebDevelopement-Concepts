@@ -37,14 +37,12 @@ const bookSchema = (
 
 const Book = mongoose.model("Book",bookSchema);
 
-//  Book.findByIdAndUpdate("656e9950064195f6a6823f9c", {price: 500}, {runValidators: true})
-//  .then((res) => {
-//     console.log(res);
-//  }) .catch((err) => {
-//     console.log(err);
-//  });
-
-
+  Book.findByIdAndUpdate("656e9950064195f6a6823f9c", {price: 500}, {runValidators: true})
+ .then((res) => {
+    console.log(res);
+  }) .catch((err) => {
+    console.log(err);
+ });
 
 
 // let book1 = new Book({
