@@ -17,7 +17,7 @@ const bookSchema = (
             required: true,
            // maxLength : 20,
         },
-        authore: {
+        author: {
             type: String,
         },
         price: {
