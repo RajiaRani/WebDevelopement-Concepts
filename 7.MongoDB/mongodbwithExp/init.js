@@ -27,6 +27,12 @@ let allChats = [{
     to : "riya",
     msg : "heelo i am jassu, riya can you call me now its urgent.",
     created_at: new Date()
+},
+{
+    from : " chenchu reddy",
+    to : " neha sharma",
+    msg : " hello  neha, i am chenchu i want somoe money can you help me.",
+    created_at : new Date()
 }
 ]
 Chat.insertMany(allChats);
