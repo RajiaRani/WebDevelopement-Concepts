@@ -20,10 +20,10 @@ async function main() {
 };
 
 //Index route
-app.get("/chats", (req,res) => {
-    let chatsData = Chat.find();
-    console.log(chatsData);
-    res.send("working");
+app.get("/chats", async(req,res) => {
+    let chatsData = await Chat.find();
+    // console.log(chatsData);
+    // res.send("working");
 })
 
 app.get("/", (req,res) => {
