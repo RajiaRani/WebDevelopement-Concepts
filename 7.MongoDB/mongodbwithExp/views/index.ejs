@@ -7,5 +7,14 @@
 </head>
 <body>
     <h2>My mini Chat app :</h2>
+    <% for ( let chat of chatsData) {%>
+     <div>
+        <p>From : <%= chat.from %></p>
+        <div>
+            <%= chat.msg %>
+        </div>
+        <p>Recieved by : <%= chat.to %></p>
+     </div>
+    <% } %>
 </body>
 </html>
