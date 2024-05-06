@@ -8,6 +8,10 @@
 </head>
 <body>
     <h2>My mini Chat app :</h2>
+    <form action="">
+        <button class="btn">Create New Chat</button>
+    </form>
+
     <% for ( let chat of chatsData) {%>
      <div class="chat">
         <p>From : <%= chat.from %></p>
@@ -20,5 +24,6 @@
      </div>
   
     <% } %>
+   
 </body>
 </html>
