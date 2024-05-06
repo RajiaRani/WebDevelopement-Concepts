@@ -28,6 +28,11 @@ app.get("/chats", async(req,res) => {
      res.render("index.ejs",{chatsData});
 })
 
+//New Route
+app.get("/chats/new", (req,res) => {
+  res.render("new.ejs");
+});
+
 app.get("/", (req,res) => {
     res.send("Hello, i am root node");
 })
