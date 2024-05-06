@@ -19,6 +19,13 @@ async function main() {
     await mongoose.connect("mongodb://127.0.0.1:27017/chatapp");
 };
 
+//Index route
+app.get("/chats", (req,res) => {
+    let chatsData = Chat.find();
+    console.log(chatsData);
+    res.send("working");
+})
+
 app.get("/", (req,res) => {
     res.send("Hello, i am root node");
 })
