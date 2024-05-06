@@ -4,18 +4,10 @@ const mongoose = require("mongoose");
 const path = require("path");
 const Chat = require("./models/chats.js");
 
-let chat1 = new Chat ( {
-    from : "Rajia Rani",
-    to : "Chenchu Reddy",
-    msg : "send me my old exam sheet",
-    created_at : new Date()
-});
-chat1.save().then((res) => {
-    console.log(res);
-});
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view  engine", "ejs");
+
 main()
 .then(() => {
     console.log("connection is successfull");
