@@ -24,6 +24,7 @@ app.get("/chats", async(req,res) => {
     let chatsData = await Chat.find();
     // console.log(chatsData);
     // res.send("working");
+     res.render("index.ejs",{chatsData});
 })
 
 app.get("/", (req,res) => {
