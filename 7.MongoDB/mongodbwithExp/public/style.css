@@ -3,7 +3,7 @@ body{
     display: inline-block;
     
 }
-h2{
+h1, h2{
     color: white;
     margin-left: 30px;
 }
