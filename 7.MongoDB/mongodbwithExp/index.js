@@ -3,12 +3,14 @@ const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
 const Chat = require("./models/chats.js");
+const methodOverride = require("method-override");
 
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view  engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({extended:true}));
+app.use(methodOverride("_method"));
 
 main()
 .then(() => {
@@ -59,7 +61,7 @@ app.post("/chats", (req,res) => {
 app.get("/chats/:id/edit", async(req,res) => {
     let { id } = req.params;
     let chat = await Chat.findById(id);
-   res.render("edit.ejs", {chat});
+    res.render("edit.ejs", {chat});
 });
 
 app.get("/", (req,res) => {
