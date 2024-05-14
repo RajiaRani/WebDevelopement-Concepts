@@ -25,6 +25,10 @@
         </div>
         <p>Recieved by : <i><%= chat.to %></i></p>
         <hr>
+        <p><%= chat.created_at.toString().split(" ") [0]%>
+           <%= chat.created_at.toString().split(" ")[2] %>
+           <%= chat.created_at.toString().split(" ")[3] %>
+           <%= chat.created_at.toString().split(" ")[4]%> </p> 
      </div>
   
     <% } %>
