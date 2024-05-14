@@ -64,6 +64,14 @@ app.get("/chats/:id/edit", async(req,res) => {
     res.render("edit.ejs", {chat});
 });
 
+//Update Route
+app.put("/chats/:id" , async(req,res) => {
+ let { id } = req.params;
+ let { msg : newMsg} = req.body;
+ let updatedChat = await Chat.findByIdAndUpdate(id, {msg : newMsg}, { runValidators: true, new: true});
+ res.redirect("/chats");
+});
+
 app.get("/", (req,res) => {
     res.send("Hello, i am root node");
 })
