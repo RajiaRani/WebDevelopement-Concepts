@@ -8,10 +8,12 @@
 </head>
 <body>
     <h2>My mini Chat app :</h2>
+    <!-- For new page -->
     <form method="GET" action="/chats/new">
         <button class="btn">Create New Chat</button>
     </form>
-
+   
+    <!-- loop for the chats -->
     <% for ( let chat of chatsData) {%>
      <div class="chat">
         <p>From : <%= chat.from %></p>
