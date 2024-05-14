@@ -56,8 +56,10 @@ app.post("/chats", (req,res) => {
 
 
 // Edit Route
-app.get("/chats/:id/edit", (req,res) => {
-   res.render("edit.ejs");
+app.get("/chats/:id/edit", async(req,res) => {
+    let { id } = req.params;
+    let chat = await Chat.findById(id);
+   res.render("edit.ejs", {chat});
 });
 
 app.get("/", (req,res) => {
