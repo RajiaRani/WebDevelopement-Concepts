@@ -43,10 +43,15 @@ app.post("/chats", (req,res) => {
     msg : msg,
     created_at: new Date()
   })
-  console.log(newChat);
-//   newChat.save.then((res) => console.log(res)).catch((err) => console.log(err));
-//   res.redirect("/chats");
-res.send("working");
+   newChat.save()
+   .then((res) => {
+    console.log(res);
+   })
+   .catch((err) => {
+    console.log(err);
+   });
+  res.redirect("/chats");
+  // res.send("working");
 });
 
 app.get("/", (req,res) => {
