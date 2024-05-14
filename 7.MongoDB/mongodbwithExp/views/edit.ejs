@@ -7,13 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <h2>Edit your message : <%= chat._id %></h2>
+ <p>Edit your message : <%= chat._id %></p>
  <form>
-   <p>from :<%= chat.from %> </p>
-   <p>to : <%= chat.to %></p>
-   <textarea name="msg" id="" cols="30" rows="10">
-    <%= chat.msg %>
-   </textarea> <br> <br>
+   <p>from : <b><%= chat.from %></b> </p>
+   <p>to : <b><%= chat.to %></b></p>
+   <textarea name="msg" id="" cols="45" rows="8"><%= chat.msg %></textarea> <br> <br>
    <button class="btn">Edit</button>
  </form>
 </body>
