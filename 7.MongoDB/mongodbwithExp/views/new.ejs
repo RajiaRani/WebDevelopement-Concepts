@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Chat App</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h2 style="color: brown;">Create New Chat</h2>
-    <input type="text" placeholder="who are you ?" name="from"> <br> <br>
-    <textarea name="msg"  cols="30" rows="10" placeholder="write your message"></textarea> <br> <br>
-    <input type="text" placeholder="receiver name" name="to"> <br> <br>
-    <button class="btn">Submit New Chat</button>
+    <form action="/chats" method="POST">
+        <input type="text" placeholder="who are you ?" name="from"> <br> <br>
+        <textarea name="msg" cols="30" rows="10" placeholder="write your message"></textarea> <br> <br>
+        <input type="text" placeholder="receiver name" name="to"> <br> <br>
+        <button class="btn">Submit New Chat</button>
+    </form>
 </body>
 </html>
