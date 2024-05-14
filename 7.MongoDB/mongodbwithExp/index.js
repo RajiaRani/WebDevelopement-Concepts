@@ -54,6 +54,12 @@ app.post("/chats", (req,res) => {
   // res.send("working");
 });
 
+
+// Edit Route
+app.get("/chats/:id/edit", (req,res) => {
+   res.render("edit.ejs");
+});
+
 app.get("/", (req,res) => {
     res.send("Hello, i am root node");
 })
