@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatApp</title>
+    <title>Edit your chat</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
  <p>Edit your message : <%= chat._id %></p>
- <form>
+ <form method="POST" action="/chats/<%= chat._id %>?_method=PUT">
    <p>from : <b><%= chat.from %></b> </p>
    <p>to : <b><%= chat.to %></b></p>
    <textarea name="msg" id="" cols="45" rows="8"><%= chat.msg %></textarea> <br> <br>
