@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+
 
 main()
 .then( res => console.log("connection is done"))
