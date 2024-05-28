@@ -14,8 +14,7 @@ async function main() {
 //HOME ROUTE
 app.get("/", (req,res) => {
     res.send("Home Root is working");
-})
-
+});
 
 // PORT LISTENING
 app.listen(8080, () => {
