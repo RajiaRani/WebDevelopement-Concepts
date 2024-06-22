@@ -19,7 +19,10 @@ const studentSchema = new mongoose.Schema({
     result:String
 });
 
+// create the model
 const Student = mongoose.model("Student", studentSchema);
+
+// Adding data
 const std1 = new Student({name: "Rajia Rani", class: 10, section:"A", rollno:12456, result:"Pass"});
 //std1.save();
 const std2 = new Student({name: "Priya Sharma", class: 12, section:"A", rollno:12496, result:"Pass"});
