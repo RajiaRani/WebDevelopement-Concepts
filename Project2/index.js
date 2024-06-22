@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
+
+const mongoose = require("mongoose"); // require mongoose
 
 
 main()
@@ -8,7 +9,7 @@ main()
 .catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/resumeDemo');
+  await mongoose.connect("mongodb://127.0.0.1:27017/resumeDemo");
 };
 
 
