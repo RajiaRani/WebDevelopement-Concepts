@@ -24,4 +24,6 @@ const std1 = new Student({name: "Rajia Rani", class: 10, section:"A", rollno:124
 //std1.save();
 const std2 = new Student({name: "Priya Sharma", class: 12, section:"A", rollno:12496, result:"Pass"});
 //std2.save();
+const std3 = new Student({name: "Preet Singh", class: 12, section:"A", rollno:11196, result:"Fait"});
+//std3.save();
 
