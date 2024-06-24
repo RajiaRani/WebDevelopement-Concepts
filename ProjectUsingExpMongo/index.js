@@ -42,9 +42,9 @@ const std4 = new Student({name: "Chenchu Reddy", class: 12, section:"A", rollno:
 // .catch((err) => console.log(err));
 
 
-Student.find({class:{$eq: 10}})
-.then((res) => console.log(res))
-.catch((err) => console.log(err));
+// Student.find({class:{$eq: 10}})
+// .then((res) => console.log(res))
+// .catch((err) => console.log(err));
 
 
 //------------------------ Multiple insertion --------------------------------
