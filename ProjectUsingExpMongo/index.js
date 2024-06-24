@@ -108,3 +108,21 @@ const std4 = new Student({name: "Chenchu Reddy", class: 12, section:"A", rollno:
 // .catch((err) => {
 //     console.log(err);
 // });
+
+//---------------------- DeleteOne ------------------------
+// Student.findOneAndDelete({name: "Rajia Rani"})
+// .then((res) => {
+//     console.log(res);
+// })
+// .catch((err) => {
+//     console.log(err);
+// });
+
+//---------------------- DeleteMany -----------------------
+Student.deleteMany({class: 12})
+.then((res) => {
+    console.log(res);
+})
+.catch((err) => {
+    console.log(err);
+});
