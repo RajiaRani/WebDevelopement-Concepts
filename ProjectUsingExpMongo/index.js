@@ -35,6 +35,18 @@ const std4 = new Student({name: "Chenchu Reddy", class: 12, section:"A", rollno:
 // .catch((err) => console.log(err));
 
 
+//Student.find({}).then((res) => console.log(res)).catch((err) => console.log(err));
+
+// Student.find({ name: {$eq:"Rajia Rani"}})
+// .then((res) => console.log(res))
+// .catch((err) => console.log(err));
+
+
+Student.find({class:{$eq: 10}})
+.then((res) => console.log(res))
+.catch((err) => console.log(err));
+
+
 //------------------------ Multiple insertion --------------------------------
 // Student.insertMany([
 //     {name: "Tony", class: 10, section:"B", rollno:12256, result:"Pass" },
