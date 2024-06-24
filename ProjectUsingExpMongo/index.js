@@ -30,6 +30,13 @@ const std2 = new Student({name: "Priya Sharma", class: 12, section:"A", rollno:1
 const std3 = new Student({name: "Preet Singh", class: 12, section:"A", rollno:11196, result:"Fait"});
 //std3.save();
 const std4 = new Student({name: "Chenchu Reddy", class: 12, section:"A", rollno:19006, result:"Pass"});
-std4.save()
-.then((res) => console.log(res))
-.catch((err) => console.log(err));
+//std4.save()
+// .then((res) => console.log(res))
+// .catch((err) => console.log(err));
+
+
+Student.insertMany([
+    {name: "Tony", class: 10, section:"B", rollno:12256, result:"Pass" },
+    {name: "Heema Rani", class: 10, section:"A", rollno:12356, result:"Fail"},
+    {name: "Sonia", class: 10, section:"A", rollno:12656, result:"Pass"}
+]).then((res) => console.log(res)).catch((err) => console.log(err));
