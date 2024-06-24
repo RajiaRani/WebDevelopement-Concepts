@@ -119,7 +119,27 @@ const std4 = new Student({name: "Chenchu Reddy", class: 12, section:"A", rollno:
 // });
 
 //---------------------- DeleteMany -----------------------
-Student.deleteMany({class: 12})
+// Student.deleteMany({class: 12})
+// .then((res) => {
+//     console.log(res);
+// })
+// .catch((err) => {
+//     console.log(err);
+// });
+
+
+//------------------- findByIdAndDelete -----------------------
+// Student.findByIdAndDelete({_id: "6676c6fe964b37ae3cbe9116"}, {new: true})
+// .then((res) => {
+//     console.log(res);
+// })
+// .catch((err) => {
+//     console.log(err);
+// });
+
+
+//------------------- findOneAndDelete -----------------------
+Student.findOneAndDelete({name: "Sonia"}, {new: true})
 .then((res) => {
     console.log(res);
 })
