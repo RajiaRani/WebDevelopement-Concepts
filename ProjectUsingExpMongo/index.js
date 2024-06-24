@@ -81,10 +81,10 @@ const std4 = new Student({name: "Chenchu Reddy", class: 12, section:"A", rollno:
 
 
 //-------------------* Update MANY Method *-----------------------
-Student.updateMany({ class: { $gt : 10}}, { result: "Fail"})
-.then((res) => {
-    console.log(res);
-})
-.catch((err) => {
-    console.log(err);
-});
+// Student.updateMany({ class: { $gt : 10}}, { result: "Fail"})
+// .then((res) => {
+//     console.log(res);
+// })
+// .catch((err) => {
+//     console.log(err);
+// });
