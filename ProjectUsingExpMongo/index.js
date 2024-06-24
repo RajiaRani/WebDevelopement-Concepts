@@ -42,9 +42,22 @@ const std4 = new Student({name: "Chenchu Reddy", class: 12, section:"A", rollno:
 // .catch((err) => console.log(err));
 
 
-// Student.find({class:{$eq: 10}})
-// .then((res) => console.log(res))
+//  Student.find({class:{$eq: 10}})
+//  .then((res) => console.log(res[0].name))
+//  .catch((err) => console.log(err));
+
+//-------------- find One Method --------------------
+// Student.findOne({ class: { $eq: 10}})
+// .then((result) => console.log(result))
 // .catch((err) => console.log(err));
+
+
+
+//------------- find By ID -----------------------
+Student.findById({ _id : "6676c689245802ddd495e65c"})
+.then((result) => console.log(result.result))
+.catch((err) => console.log(err));
+
 
 
 //------------------------ Multiple insertion --------------------------------
