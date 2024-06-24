@@ -92,12 +92,19 @@ const std4 = new Student({name: "Chenchu Reddy", class: 12, section:"A", rollno:
 
 
 //-------------------* FindOneAndUpdate Method *-----------------------
-// Student.findOneAndUpdate({ name: "Rajia Rani"}, {result: "Pass"})
+//  Student.findOneAndUpdate({ name: "Rajia Rani"}, {result: "Pass"}, {new: true})
+//  .then((res) => {
+//      console.log(res);
+//  })
+// .catch((err) =>{
+//     console.log(err);
+//  });
+
+//-------------------* FindByIdAndUpdate Method *-----------------------
+// Student.findByIdAndUpdate({_id: "6676c6fe964b37ae3cbe9117"}, {name: "Dilpreet Singh"}, {new: true})
 // .then((res) => {
 //     console.log(res);
 // })
-// .catch((err) =>{
+// .catch((err) => {
 //     console.log(err);
 // });
-
-//-------------------* FindManyAndUpdate Method *-----------------------
