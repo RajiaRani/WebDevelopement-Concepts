@@ -35,6 +35,16 @@ const std4 = new Student({name: "Chenchu Reddy", class: 12, section:"A", rollno:
 // .catch((err) => console.log(err));
 
 
+//------------------------ Multiple insertion --------------------------------
+// Student.insertMany([
+//     {name: "Tony", class: 10, section:"B", rollno:12256, result:"Pass" },
+//     {name: "Heema Rani", class: 10, section:"A", rollno:12356, result:"Fail"},
+//     {name: "Sonia", class: 10, section:"A", rollno:12656, result:"Pass"}
+// ]).then((res) => console.log(res)).catch((err) => console.log(err));
+
+
+
+
 //Student.find({}).then((res) => console.log(res)).catch((err) => console.log(err));
 
 // Student.find({ name: {$eq:"Rajia Rani"}})
@@ -54,15 +64,27 @@ const std4 = new Student({name: "Chenchu Reddy", class: 12, section:"A", rollno:
 
 
 //------------- find By ID -----------------------
-Student.findById({ _id : "6676c689245802ddd495e65c"})
-.then((result) => console.log(result.result))
-.catch((err) => console.log(err));
+// Student.findById({ _id : "6676c689245802ddd495e65c"})
+// .then((result) => console.log(result.result))
+// .catch((err) => console.log(err));
+
+
+//-------------------* Update ONE Method *-----------------------
+// Student.updateOne({name : "Rajia Rani"}, {result:"Fail"})
+// .then((res) => {
+//     console.log(res);
+// })
+// .catch((err) => {
+//     console.log(err);
+// });
 
 
 
-//------------------------ Multiple insertion --------------------------------
-// Student.insertMany([
-//     {name: "Tony", class: 10, section:"B", rollno:12256, result:"Pass" },
-//     {name: "Heema Rani", class: 10, section:"A", rollno:12356, result:"Fail"},
-//     {name: "Sonia", class: 10, section:"A", rollno:12656, result:"Pass"}
-// ]).then((res) => console.log(res)).catch((err) => console.log(err));
+//-------------------* Update MANY Method *-----------------------
+Student.updateMany({ class: { $gt : 10}}, { result: "Fail"})
+.then((res) => {
+    console.log(res);
+})
+.catch((err) => {
+    console.log(err);
+});
