@@ -33,6 +33,11 @@ const bookSchema = new mongoose.Schema({
         type: String,
         enum: [ "fiction", "non-fiction"],
     },
+    genre: [String],
+    discount: {
+        type: Number,
+        default: 0,
+    }
 });
 
 const Book = mongoose.model("Book", bookSchema);
