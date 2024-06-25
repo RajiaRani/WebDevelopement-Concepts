@@ -13,11 +13,10 @@ async function main() {
 const bookSchema = new mongoose.Schema({
     title: {
         type: String,
+        required: true,
     },
     author: {
         type: String,
-        ed: String,
-        age: Number,
     },
     price:{
         type: Number,
@@ -28,3 +27,31 @@ const bookSchema = new mongoose.Schema({
 });
 
 const Book = mongoose.model("Book", bookSchema);
+
+let book1 = new Book({
+    title: "Chemistry XII",
+    author: "Pradeep Kumar",
+    price: 1200,
+    languages: "English"
+});
+// book1.save()
+// .then((res) => {
+//     console.log(res);
+// })
+// .catch((err) => {
+//     console.log(err);
+// });
+
+// Book.insertMany([
+//     { title: "Physics XII", author:"R.D Sharma", price: 1500, languages: "English"},
+//     { title: "Mathematics XII", author:"R.D Sharma", price: 1600, languages: "English"} ,
+//     { title: "English XII", author:"R.D Sharma", price: 800, languages: "English"},
+//     { title: "Hindi XII", author:"R.D Sharma", price: 800, languages: "Hindi"},
+//     { title: "Punjabi XII", author:"R.D Sharma", price: 800, languages: "Punjabi"} ,
+// ])
+// .then(() => {
+//     console.log("insertion done");
+// })
+// .catch((err) => {
+//     console.log(err);
+// });
