@@ -14,12 +14,17 @@ const bookSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
+        maxLength: 40,
+        uppercase: true,
     },
     author: {
-        type: String,
+        name:{ type: String },
+        age: { type: Number},
+        ed: { type: String},
     },
     price:{
         type: Number,
+        min: 100,
     },
     languages:{
         type: String,
