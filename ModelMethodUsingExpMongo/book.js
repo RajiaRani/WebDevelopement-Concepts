@@ -89,3 +89,14 @@ let book1 = new Book({
 // .catch((e) => {
 //     console.log(e);
 // });
+
+Book.findOneAndUpdate(
+{_id: "667ae1d90020e08cba75654c"},
+{price: 9},
+{runValidators: true})
+.then((res) => {
+    console.log(res);
+})
+.catch((err) => {
+    console.log(err);
+});
