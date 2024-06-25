@@ -18,7 +18,8 @@ const bookSchema = new mongoose.Schema({
         uppercase: true,
     },
     author: {
-        name:{ type: String },
+        name:{ type: String ,
+              required: true},
         age: { type: Number},
         ed: { type: String},
     },
@@ -43,18 +44,24 @@ const bookSchema = new mongoose.Schema({
 const Book = mongoose.model("Book", bookSchema);
 
 let book1 = new Book({
-    title: "Chemistry XII",
-    author: "Pradeep Kumar",
+    title: "Mathematics XII",
+    author: {
+     name: "Pradeep Kumar",
+     age: 45,
+     ed: "M.Sc(Mathematics), Phd (Gold Medilicst)",
+    },
     price: 1200,
-    languages: "English"
+    languages: "English",
+    category: "fiction",
+    genre: "study",
 });
-// book1.save()
-// .then((res) => {
-//     console.log(res);
-// })
-// .catch((err) => {
-//     console.log(err);
-// });
+book1.save()
+ .then((res) => {
+     console.log(res);
+ })
+.catch((err) => {
+    console.log(err);
+ });
 
 // Book.insertMany([
 //     { title: "Physics XII", author:"R.D Sharma", price: 1500, languages: "English"},
@@ -68,4 +75,15 @@ let book1 = new Book({
 // })
 // .catch((err) => {
 //     console.log(err);
+// });
+
+
+
+
+// Book.deleteMany({languages:"English"}, { new: true})
+// .then((res) => {
+//     console.log("done");
+// })
+// .catch((e) => {
+//     console.log(e);
 // });
