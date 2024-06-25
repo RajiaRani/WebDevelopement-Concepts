@@ -25,7 +25,7 @@ const bookSchema = new mongoose.Schema({
     },
     price:{
         type: Number,
-        min: 100,
+        min: [100, "price is too low "],
     },
     languages:{
         type: String,
@@ -98,5 +98,5 @@ Book.findOneAndUpdate(
     console.log(res);
 })
 .catch((err) => {
-    console.log(err);
+    console.log(err.errors.price.properties.message);
 });
