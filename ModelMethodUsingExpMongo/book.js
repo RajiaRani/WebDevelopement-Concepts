@@ -55,13 +55,15 @@ let book1 = new Book({
     category: "fiction",
     genre: "study",
 });
-book1.save()
- .then((res) => {
-     console.log(res);
- })
-.catch((err) => {
-    console.log(err);
- });
+//book1.save()
+//  .then((res) => {
+//      console.log(res);
+//  })
+// .catch((err) => {
+//     console.log(err);
+//  });
+
+
 
 // Book.insertMany([
 //     { title: "Physics XII", author:"R.D Sharma", price: 1500, languages: "English"},
