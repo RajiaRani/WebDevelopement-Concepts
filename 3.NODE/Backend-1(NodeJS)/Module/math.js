@@ -1,6 +1,17 @@
-export const sum = ( a, b) => a + b ;
-export const mul = (a, b) => a * b ;
-export const div = ( a, b) => a / b ;
-export const sub = (a, b) => a - b ;
-export const pi = 3.14;
-export const g = 9.8;
+ const sum = ( a, b) => a + b ;
+ const mul = (a, b) => a * b ;
+ const div = ( a, b) => a / b ;
+ const sub = (a, b) => a - b ;
+ const pi = 3.14;
+ const g = 9.8;
+
+ let method = {
+    sum:sum,
+    mul:mul,
+    div:div,
+    sub:sub,
+    pi:pi,
+    g:g,
+ };
+
+module.exports = method;
