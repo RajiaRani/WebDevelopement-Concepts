@@ -29,6 +29,7 @@ rajiarani@Chenchus-MacBook-Pro Backened % node script.js
 
 const someValue = require("./math");
 
+/*
 console.log(someValue);
 console.log(someValue.sum(2,3));
 console.log(someValue.multi(2,3));
@@ -36,7 +37,7 @@ console.log(someValue.divide(2,3));
 console.log(someValue.mod(2,3));
 console.log(someValue.g);
 console.log(someValue.pi);
-
+*/
 
 // import {sum, pi} from "./math.js";
 // console.log(sum(1,2));
