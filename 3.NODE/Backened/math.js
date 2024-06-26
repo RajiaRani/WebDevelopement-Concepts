@@ -16,9 +16,10 @@ const mod = (x,y) =>{
 }
 
 
-//ye dusri file ko ek number de kar khud ko export kar rahi hai
-//module.exports = 123;
+// ye dusri file ko ek number de kar khud ko export kar rahi hai
+// module.exports = 123;
 /*
+
 module.exports = sum(4,5);
 module.exports = multi(78,90);
 module.exports = g;

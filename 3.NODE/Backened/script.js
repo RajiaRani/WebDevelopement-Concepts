@@ -9,6 +9,7 @@ console.log("bye!");
 //for process.argv
 //console.log(process.argv);
 /*
+
 rajiarani@Chenchus-MacBook-Pro Backened % node script.js
 [ ye show  hua node.js mein
     '/usr/local/bin/node',
@@ -23,9 +24,8 @@ rajiarani@Chenchus-MacBook-Pro Backened % node script.js
 
 
 
-
 //math.js se jo bhi export hua hai wo humne require kar liya
-  const someValue = require("./math");
+const someValue = require("./math");
 
 console.log(someValue);
 console.log(someValue.sum(2,3));
