@@ -22,9 +22,11 @@ rajiarani@Chenchus-MacBook-Pro Backened % node script.js
     console.log("hello & welcome to ", args[i]);
   };
 
+*/
 
 
 //math.js se jo bhi export hua hai wo humne require kar liya
+
 const someValue = require("./math");
 
 console.log(someValue);
@@ -34,7 +36,7 @@ console.log(someValue.divide(2,3));
 console.log(someValue.mod(2,3));
 console.log(someValue.g);
 console.log(someValue.pi);
-*/
 
-import {sum, pi} from "./math.js";
-console.log(sum(1,2));
+
+// import {sum, pi} from "./math.js";
+// console.log(sum(1,2));
