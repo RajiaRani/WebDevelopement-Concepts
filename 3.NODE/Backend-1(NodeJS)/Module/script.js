@@ -9,5 +9,8 @@
 
 // console.log("Generate random word :" , generate());
 
-const method = require("./math");
-console.log(method.sum(2,2));
+// const method = require("./math");
+// console.log(method.sum(2,2));
+
+const fruitInfo = require("./Fruits");
+console.log(fruitInfo);
