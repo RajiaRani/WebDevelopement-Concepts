@@ -1,12 +1,13 @@
 const express = require("express");
+
 //ye jo app hai ye humari server side wali web-application ko store karega
 let app = express();
-
 //console.dir(app);
 
 
 
 /*  Listing all the request */
+
 /*
 app.use((req,res) => {
    // console.log(req);
@@ -67,9 +68,9 @@ app.get("/random", (req,res) => {
 //port means voice ko connect karna request with respone
 let port = 8080; //3000
 
-
 //listen for incoming request
 app.listen(port, () =>{
     console.log(`app is listening on port ${port}`);
 });
+
 //to stop this server we are using ^C
