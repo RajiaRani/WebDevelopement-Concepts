@@ -43,25 +43,40 @@ app.use((req,res) => {
 
 
 
-app.use((req,res,next) => {
-    console.log("I am first middleware");
-    req.responseTime = new Date(Date.now()).toString();
-    console.log(req.method, req.hostname, req.path, req.responseTime());
-    next();
-});
+// app.use((req,res,next) => {
+//     console.log("I am first middleware");
+//     req.responseTime = new Date(Date.now()).toString();
+//     console.log(req.method, req.hostname, req.path, req.responseTime());
+//     next();
+// });
 
-app.get("/", (req,res) => {
-    res.send("i am home");
-    res.send({
-        name:"hello",
-        age:"67",
-    })
-});
-app.get("/random", (req,res) => {
-    res.send("i am random");
-});
+// app.get("/", (req,res) => {
+//     res.send("i am home");
+//     res.send({
+//         name:"hello",
+//         age:"67",
+//     })
+// });
+
+// app.get("/random", (req,res) => {
+//     res.send("i am random");
+// });
 
 
+// app.use("/", (req,res) => {
+//      console.log(req);
+//      res.send("I am root node.");
+
+
+//      res.send({
+//         name:"rajia rani",
+//          age:"28",
+//          birthplacae:"Jalandhar(Punjab), India",
+//     });
+
+//      let code = "<h1>Fruits Name</h1> <ul> <li>Mango</li> <li>Orange</li> <li>Watermelon</li> </ul>"
+//      res.send(code);
+// });
 
 
 //most commonly used method Listen
@@ -69,7 +84,7 @@ app.get("/random", (req,res) => {
 let port = 8080; //3000
 
 //listen for incoming request
-app.listen(port, () =>{
+app.listen(port, () => {
     console.log(`app is listening on port ${port}`);
 });
 
