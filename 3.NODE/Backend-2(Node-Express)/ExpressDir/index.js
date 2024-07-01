@@ -63,9 +63,18 @@ app.use((req,res) => {
 // });
 
 
-// app.use("/", (req,res) => {
-//      console.log(req);
-//      res.send("I am root node.");
+ app.get("/", (req,res) => {
+     //console.log(req);
+     res.send("I am root node.");
+ });
+
+app.get("/:username", (req,res) => {
+    let { username } = req.params;
+    console.log(username);
+    res.send(`Welcome @${username} to my channel.`);
+});
+
+
 
 
 //      res.send({
