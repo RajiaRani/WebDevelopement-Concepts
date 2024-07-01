@@ -74,7 +74,11 @@ app.get("/:username", (req,res) => {
     res.send(`Welcome @${username} to my channel.`);
 });
 
-
+app.get("/search/query", (req,res) => {
+    let { q } = req.query;
+    console.log(q);
+    res.send(`your serach is ${q}`);
+});
 
 
 //      res.send({
