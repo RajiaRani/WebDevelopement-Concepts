@@ -68,16 +68,15 @@ app.use((req,res) => {
      res.send("I am root node.");
  });
 
-app.get("/:username", (req,res) => {
-    let { username } = req.params;
-    console.log(username);
-    res.send(`Welcome @${username} to my channel.`);
-});
+// app.get("/:username", (req,res) => {
+//     let { username } = req.params;
+//     console.log(username);
+//     res.send(`Welcome @${username} to my channel.`);
+// });
 
-app.get("/search/query", (req,res) => {
-    let { q } = req.query;
-    console.log(q);
-    res.send(`your serach is ${q}`);
+app.get("/search", (req,res) => {
+    console.log(req.query);
+    res.send("done");
 });
 
 
