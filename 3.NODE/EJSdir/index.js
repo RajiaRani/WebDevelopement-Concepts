@@ -14,8 +14,6 @@ app.get("/",(req,res)=>{
     res.render("home");
 });
 
-
-
 app.get("/rolldice", (req,res) =>{
     let diceNum = Math.floor(Math.random()*6)+1 ;
     res.render("rolldice.ejs",{randomNum: diceNum});
