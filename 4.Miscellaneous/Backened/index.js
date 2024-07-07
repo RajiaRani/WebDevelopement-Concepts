@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 8080;
 
+
 app.use(express.urlencoded({extended: true})); //humari express json data ko bhi pass kare isliye ye use karege
 app.use(express.json());
 
