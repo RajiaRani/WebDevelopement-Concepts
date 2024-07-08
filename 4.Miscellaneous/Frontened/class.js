@@ -1,6 +1,7 @@
 /* ----------------- CLASSES ------------- */
 /* Classes are a template for creating objects. */
 /* The constructor method is a special method of a class for creating and initializing an object instance of that class. */
+
 class Student{
     constructor(name, std, section, roll_no){
         this.n = name;
@@ -9,7 +10,7 @@ class Student{
         this.r = roll_no;
     }
     study() {
-        console.log(`Hello, my name is ${this.n} `)
+        console.log(`Hello, my name is ${this.n}. i am study in ${this.s}. `)
     }
 }
 let s1 = new Student("Rajia",10, "B", 134567 );
