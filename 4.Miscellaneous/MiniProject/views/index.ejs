@@ -1,0 +1,21 @@
+<%- include("includes/header.ejs") %>
+<div>
+    <h2>St.College for Women</h2>
+    <h4>Students list is below : </h4>
+    <% for ( s of std) { %>
+      <div>
+       <ul>
+        <li>Student name : <%= s.name %></li>
+        <li>Father name : <%= s.father_name %></li>
+        <li>Class : <%= s.std %></li>
+        <li>Roll Number : <%= s.roll_no%></li> <br>
+        <button>Update </button>
+       </ul>
+      </div>
+      <div>
+        <ul>
+            <button> <a href="https://localhost:8080/stcollege">heck Result</a></button>
+        </ul>
+      </div>
+    <% } %>
+</div>
