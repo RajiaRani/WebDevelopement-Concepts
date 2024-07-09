@@ -3,13 +3,13 @@ const app = express();
 const path = require("path");
 const  { v4 : uuidv4 } = require("uuid");
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-app.use(express.urlencoded({extended: true}));
-app.use(express.static(path.join(__dirname, "public")));
-app.use(express.json());
 
 let students = [
     {
@@ -86,10 +86,15 @@ app.get ("/stcollege/:id/result", (req,res) => {
 
 app.patch("/stcollege/:id", (req,res) => {
     let { id } = req.params;
-    let newName = req.body.name;
-    //console.log(newname);
+    let {name}= req.body;
+    // console.log("Received ID:", id);
+    // console.log("New Name:", newName);
+
     let  student = students.find((s) => id === s.id);
-    student.name = newName;
+    if(! student) {
+        return res.status(404).send("Student not found.");
+    }
+    student.name = name;
     console.log(student);
     res.send("Patch done");
 });
