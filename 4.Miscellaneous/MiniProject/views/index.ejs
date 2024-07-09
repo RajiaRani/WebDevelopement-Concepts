@@ -12,6 +12,9 @@
         <button> <a href="http://localhost:8080/stcollege/<%= s.id %>/result">Check Result</a></button> &nbsp;
         <button><a href="http://localhost:8080/stcollege/<%= s.id %>">See more</a></button>
         <button> <a href="http://localhost:8080/stcollege/<%= s.id %>/edit">Edit</a></button>
+        <form method="POST" action="/stcollege/<%= s.id %>?_method=DELETE">
+            <button>Delete</button>
+        </form>
        </ul>
       </div>
       <br> 

@@ -109,7 +109,15 @@ app.get("/stcollege/:id/edit", (req,res) => {
     let { id } = req.params;
     let student = students.find((s) => id === s.id);
     res.render("edit.ejs", {student});
-})
+});
+
+
+// Delete route
+app.delete("/stcollege/:id", (req,res) => {
+  let { id } =  req.params;
+  students = students.filter((s) => id!== s.id);
+  res.redirect("/stcollege");
+});
 
 app.listen(8080, () => {
     console.log("I am listening on the port 8080.")
