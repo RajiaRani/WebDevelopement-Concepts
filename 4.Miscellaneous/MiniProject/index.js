@@ -111,7 +111,6 @@ app.get("/stcollege/:id/edit", (req,res) => {
     res.render("edit.ejs", {student});
 });
 
-
 // Delete route
 app.delete("/stcollege/:id", (req,res) => {
   let { id } =  req.params;
