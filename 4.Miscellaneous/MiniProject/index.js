@@ -9,6 +9,7 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.json());
 
 let students = [
     {
@@ -81,6 +82,16 @@ app.get ("/stcollege/:id/result", (req,res) => {
         return res.status(404).send("Result not found");
     }
     res.render("result.ejs", { result });
+});
+
+app.patch("/stcollege/:id", (req,res) => {
+    let { id } = req.params;
+    let newName = req.body.name;
+    //console.log(newname);
+    let  student = students.find((s) => id === s.id);
+    student.name = newName;
+    console.log(student);
+    res.send("Patch done");
 });
 
 app.listen(8080, () => {
