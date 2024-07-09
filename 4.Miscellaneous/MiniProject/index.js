@@ -13,41 +13,33 @@ let students = [
         name : "Rajia Rani",
         father_name : "Jagat Ram",
         std : "BSc(Non-Medical)-3rd sem",
-        roll_no: 13456,
-        section: "A",
         result: "Pass",
         overoll_no : 350,
-        content: " conggrats, you got 350 marks out of 500. You passed this exam with A grade."
+        sub: "Medical",
     },
     {
         name : "Preeti Rani",
         father_name : "Rajpal Singh",
         std : "BSc(Non-Medical)-3rd sem",
-        roll_no: 13656,
-        section: "A",
         result: "Pass",
-        overoll_no : 380,
-        content: " conggrats, you got 350 marks out of 500. You passed this exam with A grade."
+        overoll_no : 350,
+        sub: "Non-Medical",
     },
     {
         name : "Preeti Rani",
         father_name : "Rajpal Singh",
         std : "BSc(Non-Medical)-3rd sem",
-        roll_no: 13656,
-        section: "A",
         result: "Pass",
         overoll_no : 380,
-        content: " conggrats, you got 350 marks out of 500. You passed this exam with A grade."
+        sub: "Non-Medical",
     },
     {
         name : "Preeti Rani",
         father_name : "Rajpal Singh",
         std : "BSc(Non-Medical)-3rd sem",
-        roll_no: 13656,
-        section: "A",
         result: "Pass",
         overoll_no : 380,
-        content: " conggrats, you got 350 marks out of 500. You passed this exam with A grade."
+        sub: "Non-Medical",
     },
     
 ];
@@ -60,6 +52,11 @@ app.get("/stcollege", (req,res) => {
 // New route
 app.get("/stcollege/new", (req,res) => {
   res.render("new.ejs");
+});
+
+app.post("/stcollege", (req,res) => {
+    console.log(req.body);
+    res.send("done");
 });
 
 app.listen(8080, () => {
