@@ -2,9 +2,11 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const  { v4 : uuidv4 } = require("uuid");
+const methodOverride = require("method-override");
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
@@ -86,18 +88,28 @@ app.get ("/stcollege/:id/result", (req,res) => {
 
 app.patch("/stcollege/:id", (req,res) => {
     let { id } = req.params;
-    let {name}= req.body;
-    // console.log("Received ID:", id);
-    // console.log("New Name:", newName);
-
+    let newName = req.body.name;
+    let newfatherName = req.body.father_name;
+    let newSub = req.body.sub;
+    let newStd = req.body.std;
+    //console.log(newName);
     let  student = students.find((s) => id === s.id);
-    if(! student) {
-        return res.status(404).send("Student not found.");
-    }
-    student.name = name;
-    console.log(student);
-    res.send("Patch done");
+   if (!student) {
+    return res.status(404).send("Student not found");
+}
+student.name = newName;
+student.father_name = newfatherName;
+student.sub = newSub;
+student.std = newStd;
+
+res.redirect("/stcollege");
 });
+
+app.get("/stcollege/:id/edit", (req,res) => {
+    let { id } = req.params;
+    let student = students.find((s) => id === s.id);
+    res.render("edit.ejs", {student});
+})
 
 app.listen(8080, () => {
     console.log("I am listening on the port 8080.")

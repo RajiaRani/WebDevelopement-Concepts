@@ -1,0 +1,25 @@
+<%- include("includes/header.ejs") %>
+<body>
+    <h2>Edit</h2>
+    <div class="std">
+        <p>Student Id : <%= student.id %></p>
+     <form method="POST" action="/stcollege/<%= student.id %>?_method=PATCH">
+        <div class="row col-6">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter student name" name="name" value="<%= student.name %>"> 
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Father's name" name="father_name" value="<%= student.father_name %>">
+              </div>
+     
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter the class" name="std" value="<%= student.std %>" >
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter stream" name="sub" value="<%= student.sub %>">
+          </div>
+        </div>
+        <button>Submit</button>
+     </form>
+    </div>
+</body>
