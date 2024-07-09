@@ -50,10 +50,16 @@ let students = [
         content: " conggrats, you got 350 marks out of 500. You passed this exam with A grade."
     },
     
+];
 
-]
+// Index  route
 app.get("/stcollege", (req,res) => {
     res.render("index.ejs", {std : students});
+});
+
+// New route
+app.get("/stcollege/new", (req,res) => {
+  res.render("new.ejs");
 });
 
 app.listen(8080, () => {
