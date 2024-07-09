@@ -1,0 +1,17 @@
+<%- include("includes/header.ejs") %>
+<body>
+    <h2> Final Result </h2>
+    <div class="std">
+        <h5>Student_Id : <%= result.id %></h5>
+        <div class="res">
+            <textarea  cols="50" rows="3">congratulations !! you passed the exam.</textarea>
+        </div>
+        <br>
+        <p>Name : <%= result.name %>  &nbsp; &nbsp;
+        Father Name : <%= result.father_name %></p>
+        <p>Class : <%= result.std %></p>
+        <p>Stream  : <%= result.sub %></p>
+        <p>Last Exam Result  : <%= result.result %></p>
+    </div>
+    <button><a href="http://localhost:8080/stcollege">Back</a></button>
+</body>

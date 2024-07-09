@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const  { v4 : uuidv4 } = require("uuid");
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -10,6 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 let students = [
     {
+        id : uuidv4(),
         name : "Rajia Rani",
         father_name : "Jagat Ram",
         std : "BSc(Non-Medical)-3rd sem",
@@ -18,6 +21,7 @@ let students = [
         sub: "Medical",
     },
     {
+        id : uuidv4(),
         name : "Preeti Rani",
         father_name : "Rajpal Singh",
         std : "BSc(Non-Medical)-3rd sem",
@@ -26,6 +30,7 @@ let students = [
         sub: "Non-Medical",
     },
     {
+        id : uuidv4(),
         name : "Preeti Rani",
         father_name : "Rajpal Singh",
         std : "BSc(Non-Medical)-3rd sem",
@@ -34,6 +39,7 @@ let students = [
         sub: "Non-Medical",
     },
     {
+        id : uuidv4(),
         name : "Preeti Rani",
         father_name : "Rajpal Singh",
         std : "BSc(Non-Medical)-3rd sem",
@@ -55,8 +61,26 @@ app.get("/stcollege/new", (req,res) => {
 });
 
 app.post("/stcollege", (req,res) => {
-    console.log(req.body);
-    res.send("done");
+   let { name, std, father_name, sub } = req.body;
+   students.push({name, sub, std, father_name});
+    res.redirect("/stcollege");
+});
+
+//Show route
+app.get("/stcollege/:id", (req,res) => {
+   let { id } = req.params;
+   let  student = students.find((s) => id === s.id);
+   res.render("show.ejs", { student });
+});
+
+// Result route
+app.get ("/stcollege/:id/result", (req,res) => {
+    let { id } = req.params;
+    let result = students.find((s) => id === s.id);
+    if (!result) {
+        return res.status(404).send("Result not found");
+    }
+    res.render("result.ejs", { result });
 });
 
 app.listen(8080, () => {
