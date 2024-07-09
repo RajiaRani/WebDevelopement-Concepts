@@ -29,6 +29,26 @@ let students = [
         overoll_no : 380,
         content: " conggrats, you got 350 marks out of 500. You passed this exam with A grade."
     },
+    {
+        name : "Preeti Rani",
+        father_name : "Rajpal Singh",
+        std : "BSc(Non-Medical)-3rd sem",
+        roll_no: 13656,
+        section: "A",
+        result: "Pass",
+        overoll_no : 380,
+        content: " conggrats, you got 350 marks out of 500. You passed this exam with A grade."
+    },
+    {
+        name : "Preeti Rani",
+        father_name : "Rajpal Singh",
+        std : "BSc(Non-Medical)-3rd sem",
+        roll_no: 13656,
+        section: "A",
+        result: "Pass",
+        overoll_no : 380,
+        content: " conggrats, you got 350 marks out of 500. You passed this exam with A grade."
+    },
     
 
 ]
