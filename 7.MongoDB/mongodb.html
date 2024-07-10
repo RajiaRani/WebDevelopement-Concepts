@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB</title>
+</head>
+<body>
+    <h2>The Shell</h2>
+    <ul>
+        <li>command to start - sudo brew services start mongodb-community@7.0</li>
+        <li>mongosh - to start </li>
+        <li>use college - to create & use a new database called "college".</li>
+    </ul>
+    <h2>Basic Command</h2>
+    <ul>
+        <li>show dbs</li>
+        <li>Test - is a temparary database.</li>
+    </ul>
+    <hr>
+    <h2>How to store data ?(BSON)</h2>
+    <h4>JSON</h4>
+     <p>Because JSON format have some issuses . that issuses BSON solve karta hai. </p>
+     <ul>
+        <li>JSON is a text based format. So its parsing is very difficult.</li>
+        <li>JSON is space inefficient .</li>
+        <li>Less Data types. Example - String, Boolean , Number, Array, Object, Null.</li>
+        <li>Read by Human and Machine both.</li>
+        
+     </ul>
+    <h4>BSON</h4>
+    <li>Mongodb mein data BSON(Binary JSON)format mein save hota hai.</li>
+    <li>Mongodb ko hum data JSON format mein  hi dege but mongodb usko BSON format mein convert karte hi save kargega.</li>
+    <li>More data types.Example - String, Boolean , Number(Integer, Float, Long,Decimal128...), Array, Object, Null, Date,BinData.</li>
+    <li>Read by MAchine only.</li>
+  <br>
+  <hr>
+ <h2>Documents : </h2>
+ <p>Mongo stores data in form of documents(BSON docs).</p>
+ <h2>Collections : </h2>
+ <p>MongoDB stores documents in collections.</p>
+ <hr>
+</html>
