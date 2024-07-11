@@ -6,20 +6,20 @@
     <title>MongoDB</title>
 </head>
 <body>
-    <h2>The Shell</h2>
+    <h2 style="color: blue;">The Shell</h2>
     <ul>
         <li>command to start - sudo brew services start mongodb-community@7.0</li>
         <li>mongosh - to start </li>
         <li>use college - to create & use a new database called "college".</li>
     </ul>
-    <h2>Basic Command</h2>
+    <h2 style="color: blue;">Basic Command</h2>
     <ul>
         <li>show dbs</li>
         <li>Test - is a temparary database.</li>
     </ul>
     <hr>
-    <h2>How to store data ?(BSON)</h2>
-    <h4>JSON</h4>
+    <h2 style="color: blue;">How to store data ?(BSON)</h2>
+    <h4 style="color: blue;">JSON</h4>
      <p>Because JSON format have some issuses . that issuses BSON solve karta hai. </p>
      <ul>
         <li>JSON is a text based format. So its parsing is very difficult.</li>
@@ -28,19 +28,19 @@
         <li>Read by Human and Machine both.</li>
         
      </ul>
-    <h4>BSON</h4>
+    <h4 style="color: blue;">BSON</h4>
     <li>Mongodb mein data BSON(Binary JSON)format mein save hota hai.</li>
     <li>Mongodb ko hum data JSON format mein  hi dege but mongodb usko BSON format mein convert karte hi save kargega.</li>
     <li>More data types.Example - String, Boolean , Number(Integer, Float, Long,Decimal128...), Array, Object, Null, Date,BinData.</li>
     <li>Read by MAchine only.</li>
   <br>
   <hr>
- <h2>Documents : </h2>
+ <h2 style="color: blue;">Documents : </h2>
  <p>Mongo stores data in form of documents(BSON docs).</p>
- <h2>Collections : </h2>
+ <h2 style="color: blue;">Collections : </h2>
  <p>MongoDB stores documents in collections.</p>
  <hr>
- <h2>Insert in DB </h2>
+ <h2 style="color: blue;">Insert in DB </h2>
  <ol>
     <li>db.collection_name.insertOne({}) -- 	
         Inserts a single document into a
@@ -49,7 +49,7 @@
         Inserts multiple documents into a collection.
         insertMany(array of documents).</li>
  </ol>
- <h2>Additional Methods for Inserts : </h2>
+ <h2 style="color: blue;">Additional Methods for Inserts : </h2>
  <ul>
     <li>db.collection.updateOne() when used with the upsert: true option.</li>
     <li>db.collection.updateMany() when used with the upsert: true option.</li>
@@ -58,5 +58,13 @@
     <li>db.collection.findOneAndReplace() when used with the upsert: true option.
 
     </li>
+ </ul>
+ <hr>
+ <h2 style="color: blue;">Find in DB</h2>
+ <ul>
+    <li>db.collection.find() -- use for returns everything.</li>
+    <h3 style="color: blue;">For specific queries :</h3>
+    <li>db.collection.find({key : value})   -- this returns the cursor(reference to original).</li>
+    <li>db.collection.findOne({key : value})  -- To find the Single value and actual document.</li>
  </ul>
 </html>
