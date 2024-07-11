@@ -40,4 +40,23 @@
  <h2>Collections : </h2>
  <p>MongoDB stores documents in collections.</p>
  <hr>
+ <h2>Insert in DB </h2>
+ <ol>
+    <li>db.collection_name.insertOne({}) -- 	
+        Inserts a single document into a
+        collection.</li>
+    <li>db.collection_name.insertMany({}) -- 	
+        Inserts multiple documents into a collection.
+        insertMany(array of documents).</li>
+ </ol>
+ <h2>Additional Methods for Inserts : </h2>
+ <ul>
+    <li>db.collection.updateOne() when used with the upsert: true option.</li>
+    <li>db.collection.updateMany() when used with the upsert: true option.</li>
+    <li>db.collection.findAndModify() when used with the upsert: true option.</li>
+    <li>db.collection.findOneAndUpdate() when used with the upsert: true option.</li>
+    <li>db.collection.findOneAndReplace() when used with the upsert: true option.
+
+    </li>
+ </ul>
 </html>
