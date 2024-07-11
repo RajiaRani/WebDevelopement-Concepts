@@ -40,7 +40,10 @@
  <h2 style="color: blue;">Collections : </h2>
  <p>MongoDB stores documents in collections.</p>
  <hr>
- <h2 style="color: blue;">Insert in DB </h2>
+
+
+ <h2 style="color: blue;"><a href="https://www.mongodb.com/docs/manual/tutorial/insert-documents/">Insert in DB </a></h2>
+
  <ol>
     <li>db.collection_name.insertOne({}) -- 	
         Inserts a single document into a
@@ -67,4 +70,53 @@
     <li>db.collection.find({key : value})   -- this returns the cursor(reference to original).</li>
     <li>db.collection.findOne({key : value})  -- To find the Single value and actual document.</li>
  </ul>
+ <hr>
+ <h2 style="color: blue;"><a href="https://www.mongodb.com/docs/manual/reference/operator/query/">Query Operators</a></h2>
+ <ul>
+    <li>$eq - Matches values that are <b style="color: tomato;">equal</b> to a specified value.</li>
+    <li>$gt -- Matches values that are <b  style="color: tomato;">greater </b> than a specified value.</li>
+    <li>$gte -- Matches values that are <b style="color: tomato;">greater than or equal</b> to a specified value.</li>
+    <li>$in -- Matches any of the values <b style="color: tomato;"> specified in an array</b>.</li>
+    <li>$lt -- Matches values that are <b style="color: tomato;">less than</b> a specified value.</li>
+    <li>$lte -- Matches values that are <b style="color: tomato;">less than or equal </b>to a specified value.</li>
+    <li>$ne -- Matches all values that are <b style="color: tomato;"> not equal</b> to a specified value.</li>
+     <li>$nin -- Matches <b style="color: tomato;">none of the values specified in an array</b>.</li>
+ </ul>
+ <br>
+ <h2 style="color: blue">LOGICAL OPERATOR </h2>
+ <ol>
+    <li> $and -- Joins query clauses with a logical <b style="color: tomato;">AND</b> returns all documents that match the conditions of both clauses.</li>
+    <li> $not -- Inverts the effect of a query expression and returns documents that <b style="color: tomato;">do not</b> match the query expression.</li>
+    <li> $nor -- Joins query clauses with a logical <b style="color: tomato;">NOR </b>returns all documents that fail to match both clauses.</li>
+    <li> $or -- Joins query clauses with a logical <b style="color: tomato;">OR</b> returns all documents that match the conditions of either clause.</li>
+ </ol>
+ <br> 
+
+ <h2 style="color: blue;">ELEMENT OPERATOR</h2>
+ <ol>
+    <li>$exists -- Matches documents that have the specified field.</li>
+    <li>$type -- Selects documents if a field is of the specified type.</li>
+ </ol>
+
+ <br>
+ <h3 style="color: deepskyblue;"> Q1. Find students where marks > 75 ?</h3>
+  <p>Ans - db.student.find( {marks : {$gt: 75} })</p>
+
+ <h3 style="color: deepskyblue;"> Q1. Find students who live in Delhi or Mumbai ?</h3>
+  <p>Ans - db.student.find( { city : {$in: ["Delhi", "Mumbai"]}})</p>
+
+ <h3 style="color: deepskyblue;"> Q1. Find students who scored > 75 or live in Delhi ?</h3>
+ <p>Ans - db.student.find( { $or: [ {marks: {gt:75}}, {city: "Delhi"} ]})</p>
+ <br>
+ <hr>
+ <h2><a href="https://www.mongodb.com/docs/manual/reference/update-methods/">Update Methods</a></h2>
+ <p>MongoDB provides the following methods for updating documents in a collection:</p>
+ <p>db.collection.updateOne(<filter>, <update>, <options>)</p>
+ <p>example -- db.student.updateOne( {name : "adam"}, { $set:{marks:99}})</p>
+ <ol>
+    <li>db.collection.updateOne() -- Updates at most a <b  style="color: tomato;">single document</b> that match a specified filter even though multiple documents may match the specified filter.</li>
+    <li>db.collection.updateMany() -- Update <b style="color: tomato;">all documents </b>that match a specified filter.</li>
+    <li>db.collection.replaceOne() -- Replaces at most a <b  style="color: tomato;">single document</b> that match a specified filter even though multiple documents may match the specified filter.</li>
+ </ol>
+
 </html>
