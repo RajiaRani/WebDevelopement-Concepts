@@ -13,7 +13,7 @@
             <p> Section: <%= s.section %></p>
             <p> Subject : <%= s.subject %></p>
             <p> <b>Question : <%= s.que %></b>
-            <form method="GET" action="">
+            <form method="GET" action="/classroom/<%=s.id%>/edit">
                 <button>Edit</button>
             </form></p>
             <p> <%= s.created_at.toString().split(" ")[4] %></p>

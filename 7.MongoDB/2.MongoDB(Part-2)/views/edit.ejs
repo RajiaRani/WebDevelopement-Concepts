@@ -1,0 +1,16 @@
+<%- include("includes/common.ejs") %>
+<body>
+    <div>
+        <h1>Welcome to Classroom <i class="fa-solid fa-school"></i></h1>
+    </div>
+     <br> <br>
+     <div>
+       <div>
+        <h2> Edit your question : <%= ques.id %></h2>
+        <textarea name="que" id="que" cols="50" rows="8">
+         <%= ques.que %>
+        </textarea>
+       </div>
+       <button>Submit</button>
+    </div>
+</body>
