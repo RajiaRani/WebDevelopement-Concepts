@@ -7,7 +7,9 @@ body{
     color: black;
 }
 .std{
-   
+   width: 50%;
+   margin-right: auto;
+   padding: 10px 0px 0px 25px;
 }
 .teacher{
     color: black;

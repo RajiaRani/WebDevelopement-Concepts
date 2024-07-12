@@ -1,0 +1,23 @@
+<%- include("includes/common.ejs") %>
+<body>
+    <div>
+        <h1>Welcome to Classroom <i class="fa-solid fa-school"></i></h1>
+    </div>
+     <br> <br>
+     <div>
+       <div>
+        <h2> Ask your question in below : </h2>
+       </div>
+
+        <div>
+         <form method="POST" action="/classroom">
+            <input type="text" name="std_name" placeholder="Enter student name " > <br> <br>
+            <input type="text" name="std" placeholder="Enter class" > <br> <br>
+            <input type="text" name="section" placeholder="Enter section " > <br> <br>
+            <input type="text" name="subject" placeholder="Enter subject" > <br> <br>
+            <textarea name="que" id="que" cols="70" rows="8" placeholder="Ask your question here !!"></textarea> <br> <br>
+            <button class="btn">Submit</button>
+         </form>
+        </div>
+     </div>
+</body>

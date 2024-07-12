@@ -20,10 +20,6 @@ Student.insertMany([
         subject:"Chemistry",
         que:"What is molecular theory?",
         created_at: new Date(),
-        teacher_name:"Mrs. Rajia Syal",
-        teacher_sub:"Chemistry",
-        ans:"MOT theory is very   famous . this theory is based on the electrons and protons . ",
-        created_at: new Date(),
     },
     {
         std_name : "Chenchu Reddy",
@@ -32,10 +28,6 @@ Student.insertMany([
         subject:"AI",
         que:"What is molecular theory?",
         created_at: new Date(),
-        teacher_name:"Mrs. Rajia Syal",
-        teacher_sub:"Chemistry",
-        ans:"MOT theory is very   famous . this theory is based on the electrons and protons . ",
-        created_at: new Date(),
     },
     {
         std_name : "Roma Rani",
@@ -43,10 +35,6 @@ Student.insertMany([
         section: "A",
         subject:"Chemistry",
         que:"What is molecular theory?",
-        created_at: new Date(),
-        teacher_name:"Mrs. Rajia Syal",
-        teacher_sub:"Chemistry",
-        ans:"MOT theory is very   famous . this theory is based on the electrons and protons . ",
         created_at: new Date(),
     },
 
