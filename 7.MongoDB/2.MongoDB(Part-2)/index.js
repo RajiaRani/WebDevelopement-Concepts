@@ -72,14 +72,14 @@ app.get("/classroom/:id/edit", async(req,res) => {
 //Update Route
 app.put("/classroom/:id", async(req,res) => {
     let { id } = req.params;
-    let { que: newQuestion } = req.body;
+    let { que: newQuestion} = req.body;
     // console.log(newQuestion);
     let updatedQuestion = await Student.findByIdAndUpdate(
         id,
          { que: newQuestion},
           { runValidators: true, new: true}
     );
-    console.log(updatedQuestion);
+    // console.log(updatedQuestion);
     res.redirect("/classroom");
 });
 
