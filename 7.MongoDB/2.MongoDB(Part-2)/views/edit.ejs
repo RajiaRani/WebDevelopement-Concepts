@@ -7,10 +7,13 @@
      <div>
        <div>
         <h2> Edit your question : <%= ques.id %></h2>
+        <form  method="POST" action="/classroom/<%= ques.id %>?_method=PUT">
         <textarea name="que" id="que" cols="50" rows="8">
          <%= ques.que %>
-        </textarea>
-       </div>
-       <button>Submit</button>
+        </textarea> 
+        <br> <br>
+        <button>Submit</button>
+       </form>
+    </div>
     </div>
 </body>

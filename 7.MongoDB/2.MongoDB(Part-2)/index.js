@@ -3,15 +3,19 @@ const app = express();
 const path = require("path");
 const Student = require("./models/student.js");
 const Teacher = require("./models/teacher.js");
+const methodOverride = require("method-override");
+
 
 const mongoose = require("mongoose");
 
 //Set up for the view engine
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use(express.json());
 
 app.use(express.urlencoded({extended : true}));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(methodOverride("_method"));
 
 
 main()
@@ -64,6 +68,21 @@ app.get("/classroom/:id/edit", async(req,res) => {
     let ques =  await Student.findById(id);
     res.render("edit.ejs", {ques});
 });
+
+//Update Route
+app.put("/classroom/:id", async(req,res) => {
+    let { id } = req.params;
+    let { que: newQuestion } = req.body;
+    // console.log(newQuestion);
+    let updatedQuestion = await Student.findByIdAndUpdate(
+        id,
+         { que: newQuestion},
+          { runValidators: true, new: true}
+    );
+    console.log(updatedQuestion);
+    res.redirect("/classroom");
+});
+
 
 app.listen(8080, () => {
     console.log("I am listening on port 8080.");
