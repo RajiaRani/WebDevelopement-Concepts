@@ -1,0 +1,28 @@
+<%- include("includes/common.ejs") %>
+<body>
+    <div>
+        <h1>Welcome to Classroom <i class="fa-solid fa-school"></i></h1>
+    </div>
+     <br> <br>
+    <div class="main-container">
+        <div class="std">
+          <% for ( let s of std)  {%>
+            <p> Student Name : <%= s.std_name %></p>
+            <p> Class : <%= s.std %></p>
+            <p> Section: <%= s.section %></p>
+            <p> Subject : <%= s.subject %></p>
+            <p>Question :  <b><%= s.que %></b></p>
+            <p> Time : <%= s.created_at %></p>
+            <br>
+            <div class="teacher">
+                <p> Professor Name : <%= s.teacher_name %></p>
+                <p> Subject: <%= s.teacher_sub %></p>
+                <p> Answer : <b><%= s.ans %></b></p>
+                <p>Time : <%= s.created_at %></p>
+            </div>
+            <hr>
+        <% } %>
+    </div>
+    </div>
+
+</body>
