@@ -58,21 +58,11 @@ app.post("/classroom", (req,res) => {
 });
 
 
-app.get("/classroom/:id/ans", async(req,res) => {
-    try{
-        let { id } = req.params;
-    // console.log(id);
-    let student = await Student.findById(id);
-    if(!student){
-        return res.status(404).send("Question not found!!");
-    }
-    res.render("ans.ejs", {student});
-    } 
-    catch(err){
-      console.error("Error fetchinf answer: ", err);
-      res.status(500).send("Failed to fetch answer.");
-    }
-    res.send("done");
+//EDIT Route
+app.get("/classroom/:id/edit", async(req,res) => {
+    let { id } = req.params;
+    let ques =  await Student.findById(id);
+    res.render("edit.ejs", {ques});
 });
 
 app.listen(8080, () => {

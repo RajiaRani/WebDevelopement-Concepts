@@ -12,8 +12,12 @@
             <p> Class : <%= s.std %></p>
             <p> Section: <%= s.section %></p>
             <p> Subject : <%= s.subject %></p>
-            <p> <b>Question : <%= s.que %></b></p>
-            <p> Time : <%= s.created_at %></p>
+            <p> <b>Question : <%= s.que %></b>
+            <form method="GET" action="">
+                <button>Edit</button>
+            </form></p>
+            <p> <%= s.created_at.toString().split(" ")[4] %></p>
+            <p><%= s.created_at.toString().split(" ").slice(0,4).join(" ") %></p>
         </div>
         <button>Edit</button>
         <button>Delete</button>
