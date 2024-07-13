@@ -84,6 +84,14 @@ app.put("/classroom/:id", async(req,res) => {
 });
 
 
+//DELETE ROUTE
+app.delete("/classroom/:id", async (req,res) => {
+    let { id } = req.params;
+    let deletedQuestion =  await Student.findByIdAndDelete(id);
+    //console.log(deletedQuestion);
+    res.redirect("/classroom");
+});
+
 app.listen(8080, () => {
     console.log("I am listening on port 8080.");
 });

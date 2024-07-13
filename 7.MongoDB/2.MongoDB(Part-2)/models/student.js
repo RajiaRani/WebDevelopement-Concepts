@@ -23,8 +23,8 @@ const studentSchema = new mongoose.Schema({
     },
     created_at:{
         type: Date,
-    },
-   
+        require: true
+    }
 });
 
 const Student = mongoose.model("Student", studentSchema);

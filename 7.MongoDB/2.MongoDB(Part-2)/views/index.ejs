@@ -12,19 +12,22 @@
             <p> Class : <%= s.std %></p>
             <p> Section: <%= s.section %></p>
             <p> Subject : <%= s.subject %></p>
-            <p> <b>Question : <%= s.que %></b>
+            <p> <b>Question : <%= s.que %></b></p>
             <form method="GET" action="/classroom/<%=s.id%>/edit">
                 <button>Edit</button>
-            </form></p>
-            <p> <%= s.created_at.toString().split(" ")[4] %></p>
-            <p><%= s.created_at.toString().split(" ").slice(0,4).join(" ") %></p>
+            </form>
+            <% if (s.created_at) { %>
+                <p> <%= s.created_at.toString().split(" ")[4] %></p>
+                <p><%= s.created_at.toString().split(" ").slice(0, 4).join(" ") %></p>
+            <% } %>
         </div>
-        <button>Edit</button>
-        <button>Delete</button>
+        <form method="POST" action="/classroom/<%= s.id %>?_method=DELETE">
+            <button>Delete</button>
+        </form>
+         <br>
         <button><a href="/classroom/<%= s.id %>/ans">See Answer</a></button>
         <hr>
         <% } %>
        <button class="btn"><a href="/classroom/new">Ask Question</a></button>
     </div>
-
 </body>
