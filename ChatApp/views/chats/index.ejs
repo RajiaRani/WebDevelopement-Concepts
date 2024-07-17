@@ -8,11 +8,14 @@
         <p>To : <%= chat.to %></p>
         <p>Time : <%= new Date(chat.created_at).toString().split(" ")[4]%></p>
         <p><%= new Date(chat.created_at).toString().split(" ").slice(0,4).join("-")%></p>
-        <form method="get" action="/chats/<%= chat.id %>/edit">
+        <form method="GET" action="/chats/<%= chat.id %>/edit">
             <button>Edit</button>
         </form>
         <form method="POST" action="/chats/<%= chat.id %>?_method=Delete">
             <button>Delete</button>
+        </form>
+        <form method="GET" action="/chats/<%= chat.id %>">
+            <button>Show</button>
         </form>
         <hr>
     <% } %>
