@@ -4,7 +4,10 @@
     <p>From : <%= chat.from %></p>
     <p>To : <%= chat.to %></p>
     <form method="POST" action="/chats/<%=chat.id%>?_method=PUT">
-    <textarea name="message"  cols="36" rows="8"><%= chat.message %></textarea> <br> <br>
-    <button>Edit</button>
+    <label for="message" class="form-label">Edit Message : </label>
+    <textarea name="message"  cols="36" rows="8" class="form-control"><%= chat.message %></textarea> <br> <br>
+    <button class="btn btn-primary">Submit </button>
+    <button class="btn btn-primary"><a href="/chats/<%= chat.id %>">Back</a></button>
     </form>
+   
 </div>

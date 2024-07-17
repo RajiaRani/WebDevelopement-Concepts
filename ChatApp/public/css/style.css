@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin-top: 30px;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.card{
+   margin-left: 10px !important;
+    padding: 10px !important;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.fa-comments{
+    color: rgb(191, 43, 43);
+}

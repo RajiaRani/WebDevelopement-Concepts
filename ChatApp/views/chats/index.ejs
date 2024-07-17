@@ -1,22 +1,33 @@
 <%- layout("layouts/boilerplate.ejs") %>
-<button><a href="/chats/new">Create New Chat</a></button>
-<div class="index-container">
 
+
+<div class="row row-cols-lg-2 row-cols-md-3, row-cols-sm-1">
+ 
     <% for(chat of allChat){ %>
-        <p>From : <%= chat.from %></p>
-        <p>message: <%= chat.message %></p>
-        <p>To : <%= chat.to %></p>
-        <p>Time : <%= new Date(chat.created_at).toString().split(" ")[4]%></p>
-        <p><%= new Date(chat.created_at).toString().split(" ").slice(0,4).join("-")%></p>
-        <form method="GET" action="/chats/<%= chat.id %>/edit">
-            <button>Edit</button>
-        </form>
-        <form method="POST" action="/chats/<%= chat.id %>?_method=Delete">
-            <button>Delete</button>
-        </form>
-        <form method="GET" action="/chats/<%= chat.id %>">
-            <button>Show</button>
-        </form>
-        <hr>
-    <% } %>
+            <div class="card cols-8 mt-3 mr-3" style="width: 18rem;">
+             
+                <div class="card-body">
+                  <h5 class="card-title">From : <%= chat.from %></h5>
+                  <h6 class="card-subtitle mb-2">Reciever : <%= chat.to %></h6>
+                  <p class="card-text">message: <%= chat.message %> <br>
+                    Time : <%= new Date(chat.created_at).toString().split(" ")[4]%> 
+                    <%= new Date(chat.created_at).toString().split(" ").slice(0,4).join("-")%> </p>
+                  
+              </div>
+              <div class="btns">
+                <form method="GET" action="/chats/<%= chat.id %>">
+                    <button class="btn btn-primary card-link">Show</button>
+                </form>
+                <form method="POST" action="/chats/<%= chat.id %>?_method=Delete">
+                    <button class="btn btn-danger card-link">Delete</button>
+                </form> 
+              </div>
+            </div>
+  
+              <% } %>    
+        
 </div>
+<button class="mt-5 btn btn-primary"><a href="/chats/new">Create New Chat</a></button>
+
+
+

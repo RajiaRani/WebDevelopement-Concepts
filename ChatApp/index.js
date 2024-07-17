@@ -25,13 +25,19 @@ async function main() {
     await mongoose.connect("mongodb://127.0.0.1:27017/chatapp")
 }
 
-//Index Route
+// --------==== Index Route ====---------
 app.get("/chats",async (req,res) => {
 let  allChat = await Chat.find({});
   res.render("chats/index.ejs", {allChat});
 });
 
-//Show Route
+//New Route
+app.get("/chats/new", (req,res) => {
+    res.render("chats/new.ejs");
+  });
+
+  
+//------===== Show Route =====-----------
 app.get("/chats/:id", async(req,res) => {
   let { id } = req.params;
   let chat = await Chat.findById(id);
@@ -59,10 +65,6 @@ app.put("/chats/:id", async(req,res) => {
     res.redirect("/chats");
 });
 
-//New Route
-app.get("/chats/new", (req,res) => {
-  res.render("chats/new.ejs");
-});
 
 app.post("/chats", (req,res) => {
 let { from, to, message } = req.body;
