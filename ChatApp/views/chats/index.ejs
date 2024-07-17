@@ -1,0 +1,19 @@
+<%- layout("layouts/boilerplate.ejs") %>
+<button><a href="/chats/new">Create New Chat</a></button>
+<div class="index-container">
+
+    <% for(chat of allChat){ %>
+        <p>From : <%= chat.from %></p>
+        <p>message: <%= chat.message %></p>
+        <p>To : <%= chat.to %></p>
+        <p>Time : <%= new Date(chat.created_at).toString().split(" ")[4]%></p>
+        <p><%= new Date(chat.created_at).toString().split(" ").slice(0,4).join("-")%></p>
+        <form method="get" action="/chats/<%= chat.id %>/edit">
+            <button>Edit</button>
+        </form>
+        <form method="POST" action="/chats/<%= chat.id %>?_method=Delete">
+            <button>Delete</button>
+        </form>
+        <hr>
+    <% } %>
+</div>
