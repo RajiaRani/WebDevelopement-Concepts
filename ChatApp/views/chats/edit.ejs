@@ -3,9 +3,17 @@
     <h2>Edit your chat :</h2>
     <p>From : <%= chat.from %></p>
     <p>To : <%= chat.to %></p>
-    <form method="POST" action="/chats/<%=chat.id%>?_method=PUT">
-    <label for="message" class="form-label">Edit Message : </label>
-    <textarea name="message"  cols="36" rows="8" class="form-control"><%= chat.message %></textarea> <br> <br>
+    <form method="POST" action="/chats/<%=chat.id%>?_method=PUT" class="needs-validation" novalidate>
+    <div class="mb-3">
+        <label for="message" class="form-label">Edit Message : </label>
+        <textarea name="message"  cols="36" rows="8" class="form-control" required><%= chat.message %></textarea>
+        <div class="invalid-feedback">
+            message required!
+        </div>
+        <div class="valid-feedback">
+        edit message
+        </div>
+    </div> 
     <button class="btn btn-primary">Submit </button>
     <button class="btn btn-primary"><a href="/chats/<%= chat.id %>">Back</a></button>
     </form>

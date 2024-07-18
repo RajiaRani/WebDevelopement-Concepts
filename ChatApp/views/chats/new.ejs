@@ -1,16 +1,40 @@
 <%- layout("layouts/boilerplate.ejs") %>
-<div class="mt-5">
-    <h3>Write new chat!!</h3>
-    <form method="POST" action="/chats">
-        <label for="from" class="form-label">From :  </label>
-        <input type="text" placeholder="who are you?" name="from" class="form-control"> <br> 
-        <label for="message" class="form-label">Message : </label> 
-        <textarea placeholder="write your message here!!" cols="40" rows="10" name="message" class="form-control"></textarea>
-        <br>
-        <label for="to" class="form-label">Reciever : </label>
-        <input type="text" placeholder="add recevier" name="to" class="form-control">
-        <br>
-        <button class="btn btn-primary">Add new Chat</button>
-        <button class="btn btn-primary"><a href="/chats">Back</a></button>
-    </form>
-</div>
+    <div class="mt-5">
+        <h3>Write new chat!!</h3>
+        <form method="POST" action="/chats" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="from" class="form-label">From : </label>
+                <input type="text" placeholder="who are you?" name="from" class="form-control" required>
+                <div class="valid-feedback">
+                    name looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please fill the name
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message : </label>
+                <textarea placeholder="write your message here!!" cols="40" rows="10" name="message"
+                    class="form-control" required></textarea>
+                <div class="invalid-feedback">
+                    Please enter the message
+                </div>
+                <div class="valid-feedback">
+                    message completed
+                </div>
+
+            </div>
+            <div class="mb-3">
+                <label for="to" class="form-label">Reciever : </label>
+                <input type="text" placeholder="add recevier" name="to" class="form-control" required>
+               <div class="valid-feedback">
+                Nice name
+               </div>
+               <div class="invalid-feedback">
+                Please fill the recevier name 
+               </div>
+            </div>
+            <button class="btn btn-primary">Add new Chat</button>
+            <button class="btn btn-primary"><a href="/chats">Back</a></button>
+        </form>
+    </div>

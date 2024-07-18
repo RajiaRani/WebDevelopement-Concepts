@@ -35,10 +35,10 @@ function asyncWrap(fn) {
 }
 
 
-app.use("/chats/:id/edit",(req,res,next) =>{
-res.render("chats/error.ejs");
-next();
-});
+// app.use("/chats/:id/edit",(req,res,next) =>{
+// res.render("chats/error.ejs");
+// next();
+// });
 
 // --------==== Index Route ====---------
 app.get("/chats",async (req,res) => {
@@ -122,9 +122,13 @@ app.use((err,req,res,next) => {
 });
 
 //------==== ERROR HANDLING MIDDLEWARE ====--------
-app.use((err,req,res,next) => {
-    let { status=500, message="Some Error Occured." } = err;
-    res.status(status).send(message);
+// app.use((err,req,res,next) => {
+//     let { status=500, message="Some Error Occured." } = err;
+//     res.status(status).send(message);
+// });
+
+app.use((err, req,res, next) => {
+    res.send("something wrong");
 });
 
 app.listen(8080, () => {
