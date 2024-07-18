@@ -9,7 +9,7 @@ const ExpressError = require("./ExpressError");
 app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
-
+app.use(express.urlencoded({extended : true}));
 
 
 main()
@@ -73,6 +73,7 @@ app.get("/chats/new", (req, res) => {
     throw new ExpressError(500, "Page Not Found!!");
     res.render("new.ejs");
 });
+
 //post request
 app.post("/chats", (req, res) => {
     let { from, to, message } = req.body;

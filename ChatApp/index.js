@@ -107,6 +107,20 @@ app.delete("/chats/:id", async(req,res) => {
 });
 
 
+const handleValidationError = (err) => {
+    console.log("this is a validation error please follow the rule.");
+    console.dir(err.message);
+    return err;
+};
+
+app.use((err,req,res,next) => {
+    console.log(err.name);
+    if(err.name === "ValidationError"){
+        handleValidationError(err);
+    };
+    next(err);
+});
+
 //------==== ERROR HANDLING MIDDLEWARE ====--------
 app.use((err,req,res,next) => {
     let { status=500, message="Some Error Occured." } = err;
