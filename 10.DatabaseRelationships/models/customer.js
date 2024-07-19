@@ -10,12 +10,13 @@ async function main() {
     await mongoose.connect("mongodb://127.0.0.1:27017/relationDemo");
 };
 
+
 const orderSchema = new Schema({
     item: String,
     price: Number,
 });
 
-//store a reference to the child document inside the parent document
+//-- store a reference to the child document inside the parent document --
 const customerSchema = new Schema({
     custname: String,
     email: String,
@@ -25,6 +26,7 @@ const customerSchema = new Schema({
     }],
 
 });
+
 
 //--------------- post middleware--------------
 customerSchema.post("findOneAndDelete", async (customer) => {
