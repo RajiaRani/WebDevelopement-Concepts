@@ -5,7 +5,8 @@ const mongoose = require ("mongoose");
 const Chat = require("./models/chat.js");
 const ejsMate = require("ejs-mate");
 const methodOverride = require("method-override");
-const ExpressError = require("./ExpressError.js");
+const ExpressError = require("./utils/ExpressError.js");
+const wrapAsync = require("./utils/wrapAsync.js");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -26,15 +27,6 @@ async function main() {
     await mongoose.connect("mongodb://127.0.0.1:27017/chatapp")
 }
 
-
-//asyncWrap function
-function asyncWrap(fn) {
-    return function(req,res,next){
-        fn(req,res,next).catch((err) => next(err));
-    };
-}
-
-
 // app.use("/chats/:id/edit",(req,res,next) =>{
 // res.render("chats/error.ejs");
 // next();
@@ -48,13 +40,13 @@ let  allChat = await Chat.find({});
 
 //New Route
 app.get("/chats/new", (req,res) => {
-    //  throw new ExpressError(401, "Page not found.");
     res.render("chats/new.ejs");
   });
 
   
 //------===== Show Route =====-----------
-app.get("/chats/:id", async(req,res,next) => {
+app.get("/chats/:id",
+ async(req,res,next) => {
   let { id } = req.params;
   let chat = await Chat.findById(id);
   //console.log(chat);
