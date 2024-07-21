@@ -16,10 +16,21 @@ app.set("views", path.join(__dirname, "views"));
 app.use(session(sessionOptions));
 app.use(flash());
 
+app.use((req,res,next) => {
+    res.locals.successMsg = req.flash("success");
+    res.locals.errMsg = req.flash("error");
+    next();
+});
+
 app.get("/register", (req,res) => {
     let { name = "anoymous"} = req.query;
     //console.log(req.session);
-    req.flash("success", "registerd successfully!!");
+    
+    if( name === "anoymous"){
+        req.flash("error", "user not registered.")
+    } else {
+        req.flash("success", "registerd successfully!!");
+    }
     req.session.name = name;
     // res.send(name);
     res.redirect("/hello");
@@ -27,7 +38,7 @@ app.get("/register", (req,res) => {
 });
 app.get("/hello", (req,res) => {
     // res.send(`Hello, ${req.session.name}`);
-    res.render("./page.ejs", { name : req.session.name, msg: req.flash("success")});
+    res.render("./page.ejs", { name : req.session.name});
 });
 
 app.get("/result", (req,res) => {
@@ -62,6 +73,6 @@ app.get("/", (req,res) => {
     res.send("done session home route");
 });
 
-app.listen(3000, () => {
+app.listen(8080, () => {
     console.log("I am listening on port 3000");
 });
