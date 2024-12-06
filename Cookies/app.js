@@ -17,6 +17,10 @@ app.get("/verify", (req,res) => {
     res.send("verified");
 });
 
+app.get("/cookie",(req,res) => {
+    res.cookie("madeBy", "abroadhub.in");
+    res.send("this is my offical abroadhub.in website link.")
+})
 
 app.get("/getcookies", (req,res) => {
     res.cookie("greet", "Hello");
